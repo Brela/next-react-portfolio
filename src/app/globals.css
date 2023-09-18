@@ -2,26 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+html {
+    font-size: 18px;
   }
-}
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
+  body {
+    text-align: center;
+  }
+  
+.starwars-text {
+  
+    font-size: 3em;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    transform: perspective(300px) rotateX(25deg);
+    /* transform-origin: 50% 100%; */
+    /* text-shadow: 1px 1px 0px #646464, 2px 2px 0px #464646, 3px 3px 0px #242424, 4px 4px 0px #020202; */
+   
+    transform-origin: 50% 100%;
+  }
