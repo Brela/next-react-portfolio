@@ -27,28 +27,40 @@ export default function Home() {
         <h2 className="text-slate-200 text-lg ">Full Stack Software Engineer</h2>
       </div>
       <section className="w-full">
-        {/*        <div className="w-full text-left text-xl text-slate-200 border-b border-white/0 mb-12 mt-16 px-20">
-            Projects:
-          </div> */}
-        <div className="flex flex-col items-center mx-auto gap-20 w-[80vw] lg:w-[70vw]">
+        {/*         <div className="w-full text-left text-xl text-slate-200 border-b border-white/70 mb-20">
+          Projects:
+        </div> */}
+        <div className="flex flex-col items-center mx-auto gap-20 w-[80vw] lg:w-[50vw] lg:min-w-[50vw]">
           <ProjectContainer
             title="Orderly"
             subTitle="Inventory Tracking & Automation"
-            description="Automatically creates orders at custom reorder points."
+            description="The Orderly web app automates inventory management by triggering orders when stock levels reach user-defined reorder points,
+             factoring in additional triggers at percentages of the reorder points for delivery times. To demonstrate its capabilities,
+              the app includes a simulation feature that artificially depletes stock to mimic real-world usage. 
+            Orders can be automatically 'delivered' or manually checked off which replenishes stock levels. 
+"
             liveSiteHref="https://orderlyapp.netlify.app/"
             githubRepoHref="https://github.com/DallasSoftwareDevelopersTeamC/orderly"
             screenshot={"/projects/orderly.png"}
             techIcons={orderlyTechIcons}
+            completionDate="04-03-2023"
+            timeSpan="2 months"
+            features={[]}
+            complexity={7}
             // underMaintenance={true}
           />
           <ProjectContainer
             title="Background Pixels"
             subTitle="Generate a Pixelated Background"
-            description="Automatically creates orders at custom reorder points."
+            description="Add any colors you like to the color array and create an intriguing piece of art with the click of a button; powered by vanilla JavaScript. Planning on implementing a feature to download as png."
             liveSiteHref="https://background-pixels.netlify.app/"
             githubRepoHref="https://github.com/Brela/background-pixels"
-            screenshot={"/projects/background-pixels.png"} // You may want to change this to the actual screenshot for Background Pixels
+            screenshot={"/projects/background-pixels.png"}
             techIcons={bgPixelsTechIcons}
+            completionDate="12-20-2022"
+            timeSpan="10 days"
+            features={["Making a fitting mobile friendly layout."]}
+            complexity={2}
           />
         </div>
       </section>

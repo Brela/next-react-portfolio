@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import type { StaticImageData } from "next/image";
+import Description from "./Description";
 
 interface Props {
   title: string;
@@ -11,6 +12,10 @@ interface Props {
   screenshot: string;
   techIcons: string[];
   underMaintenance?: boolean;
+  completionDate: string;
+  timeSpan: string;
+  features?: string[];
+  complexity: number;
 }
 
 export default function ProjectContainer({
@@ -22,12 +27,16 @@ export default function ProjectContainer({
   screenshot,
   techIcons,
   underMaintenance,
+  completionDate,
+  timeSpan,
+  features,
+  complexity,
 }: Props) {
   return (
     <section className="relative">
       <article
-        className="rounded-md min-h-[500px] flex flex-col gap-3 items-center py-3 px-5 lg:px-20"
-        style={{ boxShadow: "1px 1px 10px white" }}
+        className="rounded-md min-h-[500px] flex flex-col gap-3 items-center py-3 px-5 lg:px-5"
+        style={{ boxShadow: "0px 0px 5px white" }}
       >
         {/* ----------------------- title & subtitle ---------------------------------------------------- */}
         <div>
@@ -37,11 +46,62 @@ export default function ProjectContainer({
 
         {/* ----------------------- image ---------------------------------------------------- */}
         <figure className="py-2">
-          <Image src={screenshot} alt={`${title} Screenshot`} width="533" height="400" />
+          <Image src={screenshot} alt={`${title} Screenshot`} width="400" height="300" />
         </figure>
 
+        {/* ----------------------- description ---------------------------------------------------- */}
+        <div className="text-left w-3/4">
+          <Description description={description} />
+        </div>
+
         {/* ----------------------- details ---------------------------------------------------- */}
-        <p>{description}</p>
+        <div className="flex flex-grow justify-center w-3/4 mt-3 lg:border lg:bg-white/5 p-5">
+          <table className="w-full">
+            <tbody>
+              <tr>
+                <td className="text-left w-1/2">Completion Date:</td>
+                <td className="text-left">{completionDate}</td>
+              </tr>
+              <tr>
+                <td className="text-left w-1/2">Time Span:</td>
+                <td className="text-left">{timeSpan}</td>
+              </tr>
+              <tr>
+                <td className="text-left w-1/2">Complexity:</td>
+                <td className="text-left">
+                  <div className="flex">
+                    {Array.from({ length: 10 }, (_, i) => {
+                      const colorClasses = [
+                        "bg-green-50",
+                        "bg-green-100",
+                        "bg-green-200",
+                        "bg-green-300",
+                        "bg-green-400",
+                        "bg-green-500",
+                        "bg-green-600",
+                        "bg-green-700",
+                        "bg-green-8300",
+                        "bg-green-900",
+                      ];
+                      const color = i < complexity ? colorClasses[i] : "bg-gray-700";
+                      return <div key={i} className={`w-4 h-4 border ${color}`}></div>;
+                    })}
+                  </div>
+                </td>
+              </tr>
+              {/* <tr>
+                <td className="text-left align-text-top w-1/2">Features:</td>
+                <td className="text-left">
+                  <ul>
+                    {features.map((feature, index) => (
+                      <li key={index}>- {feature}</li>
+                    ))}
+                  </ul>
+                </td>
+              </tr> */}
+            </tbody>
+          </table>
+        </div>
 
         {/* ----------------------- links ---------------------------------------------------- */}
         <div className="flex gap-4 w-full justify-center px-12 pt-7 rounded-sm">
