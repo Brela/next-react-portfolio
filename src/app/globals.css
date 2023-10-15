@@ -10,14 +10,3 @@ html {
     text-align: center;
   }
   
-.starwars-text {
-  
-    font-size: 3em;
-    color: rgb(255, 255, 255);
-    text-align: center;
-    transform: perspective(300px) rotateX(25deg);
-    /* transform-origin: 50% 100%; */
-    /* text-shadow: 1px 1px 0px #646464, 2px 2px 0px #464646, 3px 3px 0px #242424, 4px 4px 0px #020202; */
-   
-    transform-origin: 50% 100%;
-  }

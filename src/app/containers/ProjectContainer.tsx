@@ -1,76 +1,86 @@
 import React from "react";
 import Image from "next/image";
-import orderlyScreenshot from "../../../public/Screenshot 2023-09-16 at 3.24.16 PM.png";
-// import css3Icon from "https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg";
+import type { StaticImageData } from "next/image";
 
-export default function ProjectContainer() {
+interface Props {
+  title: string;
+  subTitle: string;
+  description: string;
+  liveSiteHref: string;
+  githubRepoHref: string;
+  screenshot: string;
+  techIcons: string[];
+  underMaintenance?: boolean;
+}
+
+export default function ProjectContainer({
+  title,
+  subTitle,
+  description,
+  liveSiteHref,
+  githubRepoHref,
+  screenshot,
+  techIcons,
+  underMaintenance,
+}: Props) {
   return (
-    <section>
+    <section className="relative">
       <article
-        className="rounded-md h-[500px] flex flex-col items-center p-4"
-        style={{
-          boxShadow: "1px 2px 10px white",
-        }}
+        className="rounded-md min-h-[500px] flex flex-col gap-3 items-center py-3 px-5 lg:px-20"
+        style={{ boxShadow: "1px 1px 10px white" }}
       >
-        <h3 className="pb-3 title text-2xl font-semibold text-center">
-          Orderly
-        </h3>
-        <figure>
-          <Image
-            src={orderlyScreenshot}
-            alt="Orderly Screenshot"
-            width="400"
-            height="300"
-          />
-        </figure>
-        <h4 className="text-accent-green">Inventory Tracking & Automation</h4>
-        <p>Automatically creates orders at custom reorder points.</p>
-        <div className="visit-buttons">
-          <a
-            href="https://orderlyapp.netlify.app/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <button className="link-to-project1">Live Site</button>
-          </a>
-          <a
-            href="https://github.com/DallasSoftwareDevelopersTeamC/orderly"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <button className="link-to-project1">GitHub Repo</button>
-          </a>
+        {/* grouping these to omit flex gap */}
+        <div>
+          <h3 className=" text-xl font-semibold text-center">{title}</h3>
+          <h4 className="text-accent-green">{subTitle}</h4>
         </div>
-        <div className="tech-icons">
-          <div>
-            <Image
-              src={"https://skillicons.dev/icons?i=react"}
-              alt="Orderly Screenshot"
-              width="20"
-              height="20"
-            />
-          </div>
-          {/*  <div>
-            <Image src={orderlyScreenshot} alt="Orderly Screenshot" />
-            <img src={css3Icon} alt="css3" />
-          </div>
-          <div>
-            <Image src={orderlyScreenshot} alt="Orderly Screenshot" />
-            <img src={nodejsIcon} alt="nodejs" />
-          </div>
-          <div>
-            <Image src={orderlyScreenshot} alt="Orderly Screenshot" />
-            <img src={postgreIcon} alt="postgre" />
-          </div> */}
+        <figure className="py-2">
+          <Image src={screenshot} alt={`${title} Screenshot`} width="533" height="400" />
+        </figure>
+
+        <p>{description}</p>
+
+        {/* Disable buttons if under maintenance */}
+        <div className="flex gap-4 w-full justify-center px-12 pt-7 rounded-sm">
+          <a
+            className="underline basis-1/3 rounded-sm text-sm font-semibold py-1 hover:bg-white/30 border border-white/30"
+            // style={{ boxShadow: "1px 1px 10px rgba(220, 222, 224, .8)" }}
+            href={liveSiteHref}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <button disabled={underMaintenance} className="tracking-widest">
+              Live Site
+            </button>
+          </a>
+          <span>|</span>
+          <a
+            className="underline basis-1/3 rounded-sm text-sm font-bold  py-1 hover:bg-white/30 border border-white/30"
+            // style={{ boxShadow: "1px 1px 10px rgba(220, 222, 224, .8)" }}
+            href={githubRepoHref}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <button disabled={underMaintenance} className="tracking-widest">
+              GitHub Repo
+            </button>
+          </a>
         </div>
 
-        {/* Uncomment this if you want the overlay to show */}
-        {/* 
-      <div className="overlay">
-        <p>Currently down for maintenance</p>
-      </div> 
-      */}
+        <div className="tech-icons flex gap-7 my-5">
+          {techIcons.map((icon, index) => (
+            <div key={index}>
+              <Image src={icon} alt={`${title} tech-icon`} width="30" height="30" />
+            </div>
+          ))}
+        </div>
       </article>
+      {/* Under maintenance overlay */}
+      {underMaintenance && (
+        <div className="absolute inset-0 flex items-center justify-center bg-gray-700 bg-opacity-50 z-10">
+          <p className="text-white">Currently down for maintenance</p>
+        </div>
+      )}
     </section>
   );
 }
