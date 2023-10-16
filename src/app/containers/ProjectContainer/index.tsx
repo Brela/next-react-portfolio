@@ -59,12 +59,12 @@ export default function ProjectContainer({
           <table className="w-full">
             <tbody>
               <tr>
-                <td className="text-left w-1/2">Completion Date:</td>
-                <td className="text-left">{completionDate}</td>
+                <td className="text-left w-1/2">Completed:</td>
+                <td className="text-left  text-cyan-200 font-semibold">{completionDate}</td>
               </tr>
               <tr>
                 <td className="text-left w-1/2">Time Span:</td>
-                <td className="text-left">{timeSpan}</td>
+                <td className="text-left text-cyan-200 font-semibold">{timeSpan}</td>
               </tr>
               <tr>
                 <td className="text-left w-1/2">Complexity:</td>

@@ -30,7 +30,7 @@ export default function Home() {
         {/*         <div className="w-full text-left text-xl text-slate-200 border-b border-white/70 mb-20">
           Projects:
         </div> */}
-        <div className="flex flex-col items-center mx-auto gap-20 w-[80vw] lg:w-[50vw] lg:min-w-[50vw]">
+        <div className="flex flex-col items-center mx-auto gap-20 w-[80vw] lg:w-[40vw] lg:min-w-[40vw]">
           <ProjectContainer
             title="Orderly"
             subTitle="Inventory Tracking & Automation"
@@ -52,7 +52,7 @@ export default function Home() {
           <ProjectContainer
             title="Background Pixels"
             subTitle="Generate a Pixelated Background"
-            description="Add any colors you like to the color array and create an intriguing piece of art with the click of a button; powered by vanilla JavaScript. Planning on implementing a feature to download as png."
+            description="Add any colors you like to the Color Array and create an intriguing piece of art with the click of a button; powered by vanilla JavaScript. Planning on implementing a feature to download as png."
             liveSiteHref="https://background-pixels.netlify.app/"
             githubRepoHref="https://github.com/Brela/background-pixels"
             screenshot={"/projects/background-pixels.png"}

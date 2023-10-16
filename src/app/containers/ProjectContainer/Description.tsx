@@ -6,7 +6,7 @@ interface Props {
 
 const Description = ({ description }: Props) => {
   const [showFullDescription, setShowFullDescription] = useState(false);
-  const charLimit = 170;
+  const charLimit = 133;
 
   return (
     <p className="whitespace-normal inline">
@@ -21,6 +21,7 @@ const Description = ({ description }: Props) => {
             </button>
           ) : (
             <button onClick={() => setShowFullDescription(false)} className="text-cyan-200 inline ">
+              {" "}
               ...less
             </button>
           )}
