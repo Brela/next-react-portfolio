@@ -36,40 +36,46 @@ export default function ProjectContainer({
   return (
     <section className="relative">
       <article
-        className="rounded-md min-h-[500px] flex flex-col gap-3 items-center py-3 px-5 lg:px-12"
-        style={{ boxShadow: "0px 0px 5px white" }}
+        className="rounded-md flex flex-col gap-3 items-center py-5 lg:px-12 bg-slate-900/10 lg:bg-slate-900/20"
+        style={{ boxShadow: "0px 0px 4px white" }}
       >
         {/* ----------------------- title & subtitle ---------------------------------------------------- */}
-        <div>
-          <h3 className=" text-xl font-semibold text-center">{title}</h3>
-          <h4 className="text-accent-green">{subTitle}</h4>
+        <div className="px-5">
+          <h3 className=" text-xl font-semibold text-center pb-1">{title}</h3>
+          <h4 className="text-accent-green whitespace-normal text-sm">{subTitle}</h4>
         </div>
 
         {/* ----------------------- image ---------------------------------------------------- */}
         <figure className="py-2">
-          <Image src={screenshot} alt={`${title} Screenshot`} width="400" height="300" className="" />
+          <Image
+            src={screenshot}
+            alt={`${title} Screenshot`}
+            width="400"
+            height="300"
+            className="w-3/4 lg:w-full block mx-auto"
+          />
         </figure>
 
         {/* ----------------------- description ---------------------------------------------------- */}
-        <div className="text-left">
+        <div className="text-left text-xs lg:text-sm tracking-wide px-5 lg:px-0">
           <Description description={description} />
         </div>
 
         {/* ----------------------- details ---------------------------------------------------- */}
-        <div className="flex flex-grow justify-center w-full mt-3 lg:border text-slate-200 border-white/5 lg:bg-white/5 p-5 px-10">
+        <div className="flex flex-grow justify-center w-full mt-3 lg:border text-slate-200 border-white/5 lg:bg-white/5 py-5 px-5 md:px-10">
           <table className="w-full">
             <tbody>
               <tr>
-                <td className="text-left text-sm w-1/3">Completed:</td>
+                <td className="text-left text-sm pr-3 w-1/3">Completed:</td>
                 <td className="text-left  text-slate-100 ">{completionDate}</td>
               </tr>
               <tr>
-                <td className="text-left text-sm w-1/3 pt-2">Time Span:</td>
+                <td className="text-left text-sm pr-3 w-1/3 pt-2">Time Span:</td>
                 <td className="text-left text-slate-100 ">{timeSpan}</td>
               </tr>
 
               <tr>
-                <td className="text-left text-sm w-1/3 pt-2">Complexity:</td>
+                <td className="text-left text-sm pr-3 w-1/3 pt-2">Complexity:</td>
                 <td className="text-left">
                   <div className="flex">
                     {Array.from({ length: 10 }, (_, i) => {
@@ -107,9 +113,9 @@ export default function ProjectContainer({
         </div>
 
         {/* ----------------------- links ---------------------------------------------------- */}
-        <div className="flex gap-8 w-full justify-center px-12 pt-7 rounded-sm">
+        <div className="flex gap-8 w-full justify-center px-4 lg:px-12 pt-7 rounded-sm">
           <a
-            className="underline basis-1/3 rounded-sm text-sm font-semibold py-1 hover:bg-white/30 border border-white/30"
+            className="underline basis-1/2 xl:basis-1/3 rounded-sm text-sm font-semibold py-1 hover:bg-white/30 border border-white/30 hover:border-accent-green"
             // style={{ boxShadow: "1px 1px 10px rgba(220, 222, 224, .8)" }}
             href={liveSiteHref}
             target="_blank"
@@ -121,7 +127,7 @@ export default function ProjectContainer({
           </a>
           {/* <span>|</span> */}
           <a
-            className="underline basis-1/3 rounded-sm text-sm font-bold  py-1 hover:bg-white/30 border border-white/30"
+            className="underline basis-1/2 lg:basis-1/3 rounded-sm text-sm font-bold  py-1 hover:bg-white/30 border border-white/30 hover:border-accent-green"
             // style={{ boxShadow: "1px 1px 10px rgba(220, 222, 224, .8)" }}
             href={githubRepoHref}
             target="_blank"

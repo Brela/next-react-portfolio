@@ -9,7 +9,7 @@ const Description = ({ description }: Props) => {
   const charLimit = 133;
 
   return (
-    <p className="whitespace-normal inline">
+    <p className=" inline">
       {showFullDescription || description.length <= charLimit
         ? description
         : `${description.substring(0, charLimit)} `}
