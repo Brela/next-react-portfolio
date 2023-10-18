@@ -35,7 +35,7 @@ export default function ProjectContainer({
   return (
     <section className="relative">
       <article
-        className="rounded-md min-h-[500px] flex flex-col gap-3 items-center py-3 px-5 lg:px-5"
+        className="rounded-md min-h-[500px] flex flex-col gap-3 items-center py-3 px-5 lg:px-12"
         style={{ boxShadow: "0px 0px 5px white" }}
       >
         {/* ----------------------- title & subtitle ---------------------------------------------------- */}
@@ -46,16 +46,16 @@ export default function ProjectContainer({
 
         {/* ----------------------- image ---------------------------------------------------- */}
         <figure className="py-2">
-          <Image src={screenshot} alt={`${title} Screenshot`} width="400" height="300" />
+          <Image src={screenshot} alt={`${title} Screenshot`} width="400" height="300" className="" />
         </figure>
 
         {/* ----------------------- description ---------------------------------------------------- */}
-        <div className="text-left w-3/4">
+        <div className="text-left">
           <Description description={description} />
         </div>
 
         {/* ----------------------- details ---------------------------------------------------- */}
-        <div className="flex flex-grow justify-center w-3/4 mt-3 lg:border lg:bg-white/5 p-5">
+        <div className="flex flex-grow justify-center w-full mt-3 lg:border border-white/5 lg:bg-white/5 p-5">
           <table className="w-full">
             <tbody>
               <tr>
@@ -63,11 +63,12 @@ export default function ProjectContainer({
                 <td className="text-left  text-cyan-200 font-semibold">{completionDate}</td>
               </tr>
               <tr>
-                <td className="text-left w-1/2">Time Span:</td>
+                <td className="text-left w-1/2 pt-2">Time Span:</td>
                 <td className="text-left text-cyan-200 font-semibold">{timeSpan}</td>
               </tr>
+
               <tr>
-                <td className="text-left w-1/2">Complexity:</td>
+                <td className="text-left w-1/2 pt-2">Complexity:</td>
                 <td className="text-left">
                   <div className="flex">
                     {Array.from({ length: 10 }, (_, i) => {
@@ -86,6 +87,18 @@ export default function ProjectContainer({
                       const color = i < complexity ? colorClasses[i] : "bg-gray-700";
                       return <div key={i} className={`w-4 h-4 border ${color}`}></div>;
                     })}
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td className="text-left w-1/2 pt-2">Stack:</td>
+                <td className="text-left text-cyan-200 font-semibold">
+                  <div className="tech-icons flex gap-4">
+                    {techIcons.map((icon, index) => (
+                      <div key={index}>
+                        <Image src={icon} alt={`${title} tech-icon`} width="30" height="30" />
+                      </div>
+                    ))}
                   </div>
                 </td>
               </tr>
@@ -128,15 +141,6 @@ export default function ProjectContainer({
               GitHub Repo
             </button>
           </a>
-        </div>
-
-        {/* ----------------------- icons ---------------------------------------------------- */}
-        <div className="tech-icons flex gap-7 my-5">
-          {techIcons.map((icon, index) => (
-            <div key={index}>
-              <Image src={icon} alt={`${title} tech-icon`} width="30" height="30" />
-            </div>
-          ))}
         </div>
       </article>
       {/* Under maintenance overlay */}
