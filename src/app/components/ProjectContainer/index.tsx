@@ -39,6 +39,17 @@ export default function ProjectContainer({
         className="rounded-md flex flex-col gap-3 items-center py-5 lg:px-12 bg-slate-900/10 lg:bg-slate-900/20"
         style={{ boxShadow: "0px 0px 4px white" }}
       >
+        {/* ----------------------- stats ---------------------------------------------------- */}
+        <section className="absolute bottom-0 left-2">
+          <Tooltip content={<div className="text-slate-700 text-sm p-3">Completion Date Of {title}</div>}>
+            <div className="text-slate-200 text-xs p-3">{completionDate}</div>
+          </Tooltip>
+        </section>
+        <section className="absolute bottom-0 right-2">
+          <Tooltip content={<div className="text-slate-700 text-sm p-3">{title} Project Duration</div>}>
+            <div className="text-slate-200 text-xs p-3">{timeSpan}</div>
+          </Tooltip>
+        </section>
         {/* ----------------------- title & subtitle ---------------------------------------------------- */}
         <div className="px-5">
           <h3 className=" text-xl font-semibold text-center pb-1">{title}</h3>
@@ -103,28 +114,6 @@ export default function ProjectContainer({
               ))}
             </div>
           </div>
-
-          {/* ----------------------- stats ---------------------------------------------------- */}
-          <Tooltip
-            content={
-              <div className="flex flex-grow justify-center w-full mt-3 lg:border text-slate-200 border-white/5 lg:bg-white/5 py-5 px-5 md:px-10">
-                <table className="w-full">
-                  <tbody>
-                    <tr>
-                      <td className="text-left text-sm pr-3 w-1/3">Completed:</td>
-                      <td className="text-left  text-slate-100 ">{completionDate}</td>
-                    </tr>
-                    <tr>
-                      <td className="text-left text-sm pr-3 w-1/3 pt-2">Time Span:</td>
-                      <td className="text-left text-slate-100 ">{timeSpan}</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            }
-          >
-            <div>Stats</div>
-          </Tooltip>
         </section>
       </article>
       {/* Under maintenance overlay */}
