@@ -85,6 +85,9 @@ export default function Home() {
         </div>
       </section>
       <section className="w-full mt-16">
+        <SectionHeading title="Work Projects:" />
+      </section>
+      <section className="w-full mt-16">
         <SectionHeading title="Past Projects:" />
       </section>
       <section className="w-full mt-16">

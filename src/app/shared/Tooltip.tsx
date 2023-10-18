@@ -7,10 +7,12 @@ import Leaflet from "./Leaflet";
 
 export default function Tooltip({
   children,
+  contentClassName,
   content,
   fullWidth,
 }: {
   children: ReactNode;
+  contentClassName?: string;
   content: ReactNode | string;
   fullWidth?: boolean;
 }) {
