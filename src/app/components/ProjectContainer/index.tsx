@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import type { StaticImageData } from "next/image";
 import Description from "./Description";
-import Tooltip from "@/app/components/Tooltip";
+import Tooltip from "@/app/shared/Tooltip";
 
 interface Props {
   title: string;

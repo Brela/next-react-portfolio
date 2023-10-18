@@ -1,5 +1,6 @@
 import React from "react";
-import ProjectContainer from "./containers/ProjectContainer";
+import ProjectContainer from "./components/ProjectContainer";
+import SectionHeading from "./components/SectionHeading";
 // import OrderlyScreenshot from "../../public/projectOrderly.png";
 // import NodeIcon from "../../public/nodejs.png";
 // import PostgresIcon from "../../public/postgre.png";
@@ -48,9 +49,7 @@ export default function Home() {
         <h2 className="text-slate-200 text-lg ">Full Stack Software Engineer</h2>
       </div>
       <section className="w-full">
-        <div className="lg:w-3/4 text-left block mx-auto text-sm tracking-widest font-bold text-slate-200/70 border-b border-dashed border-white/70 mb-7 lg:mb-10">
-          Recent Projects:
-        </div>
+        <SectionHeading title=" Recent Projects:" />
         <div className="flex flex-col items-center mx-auto gap-16 lg:w-1/2 lg:min-w-1/2">
           <ProjectContainer
             title="Orderly"
@@ -84,6 +83,12 @@ export default function Home() {
             complexity={2}
           />
         </div>
+      </section>
+      <section className="w-full mt-16">
+        <SectionHeading title="Past Projects:" />
+      </section>
+      <section className="w-full mt-16">
+        <SectionHeading title="Beats:" />
       </section>
     </main>
   );
