@@ -22,15 +22,15 @@ const bgPixelsTechIcons = [
 export default function Home() {
   return (
     <main className="pt-4 pb-10 px-5 flex flex-col items-center w-full">
-      <div className=" w-full mb-16">
+      <div className=" w-full mb-10 lg:mb-14">
         <h1 className="text-4xl mb-1">Clayton Breland</h1>
         <h2 className="text-slate-200 text-lg ">Full Stack Software Engineer</h2>
       </div>
       <section className="w-full">
-        {/*         <div className="w-full text-left text-xl text-slate-200 border-b border-white/70 mb-20">
-          Projects:
-        </div> */}
-        <div className="flex flex-col items-center mx-auto gap-20 w-[80vw] lg:w-[40vw] lg:min-w-[40vw]">
+        <div className="lg:w-3/4 text-left block mx-auto text-sm tracking-widest font-bold text-slate-200/70 border-b border-dashed border-white/70 mb-7 lg:mb-16">
+          Recent Projects:
+        </div>
+        <div className="flex flex-col items-center mx-auto gap-20 w-[80vw] lg:w-1/2 lg:min-w-1/2">
           <ProjectContainer
             title="Orderly"
             subTitle="Inventory Tracking & Automation"
