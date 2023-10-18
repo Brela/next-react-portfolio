@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import type { StaticImageData } from "next/image";
 import Description from "./Description";
+import Tooltip from "@/app/components/Tooltip";
 
 interface Props {
   title: string;
@@ -10,7 +11,7 @@ interface Props {
   liveSiteHref: string;
   githubRepoHref: string;
   screenshot: string;
-  techIcons: string[];
+  techStack: { name: string; icon: string | StaticImageData }[];
   underMaintenance?: boolean;
   completionDate: string;
   timeSpan: string;
@@ -25,7 +26,7 @@ export default function ProjectContainer({
   liveSiteHref,
   githubRepoHref,
   screenshot,
-  techIcons,
+  techStack,
   underMaintenance,
   completionDate,
   timeSpan,
@@ -55,20 +56,20 @@ export default function ProjectContainer({
         </div>
 
         {/* ----------------------- details ---------------------------------------------------- */}
-        <div className="flex flex-grow justify-center w-full mt-3 lg:border border-white/5 lg:bg-white/5 p-5">
+        <div className="flex flex-grow justify-center w-full mt-3 lg:border text-slate-200 border-white/5 lg:bg-white/5 p-5 px-10">
           <table className="w-full">
             <tbody>
               <tr>
-                <td className="text-left w-1/2">Completed:</td>
-                <td className="text-left  text-cyan-200 font-semibold">{completionDate}</td>
+                <td className="text-left text-sm w-1/3">Completed:</td>
+                <td className="text-left  text-slate-100 ">{completionDate}</td>
               </tr>
               <tr>
-                <td className="text-left w-1/2 pt-2">Time Span:</td>
-                <td className="text-left text-cyan-200 font-semibold">{timeSpan}</td>
+                <td className="text-left text-sm w-1/3 pt-2">Time Span:</td>
+                <td className="text-left text-slate-100 ">{timeSpan}</td>
               </tr>
 
               <tr>
-                <td className="text-left w-1/2 pt-2">Complexity:</td>
+                <td className="text-left text-sm w-1/3 pt-2">Complexity:</td>
                 <td className="text-left">
                   <div className="flex">
                     {Array.from({ length: 10 }, (_, i) => {
@@ -90,18 +91,7 @@ export default function ProjectContainer({
                   </div>
                 </td>
               </tr>
-              <tr>
-                <td className="text-left w-1/2 pt-2">Stack:</td>
-                <td className="text-left text-cyan-200 font-semibold">
-                  <div className="tech-icons flex gap-4">
-                    {techIcons.map((icon, index) => (
-                      <div key={index}>
-                        <Image src={icon} alt={`${title} tech-icon`} width="30" height="30" />
-                      </div>
-                    ))}
-                  </div>
-                </td>
-              </tr>
+
               {/* <tr>
                 <td className="text-left align-text-top w-1/2">Features:</td>
                 <td className="text-left">
@@ -117,7 +107,7 @@ export default function ProjectContainer({
         </div>
 
         {/* ----------------------- links ---------------------------------------------------- */}
-        <div className="flex gap-4 w-full justify-center px-12 pt-7 rounded-sm">
+        <div className="flex gap-8 w-full justify-center px-12 pt-7 rounded-sm">
           <a
             className="underline basis-1/3 rounded-sm text-sm font-semibold py-1 hover:bg-white/30 border border-white/30"
             // style={{ boxShadow: "1px 1px 10px rgba(220, 222, 224, .8)" }}
@@ -129,7 +119,7 @@ export default function ProjectContainer({
               Live Site
             </button>
           </a>
-          <span>|</span>
+          {/* <span>|</span> */}
           <a
             className="underline basis-1/3 rounded-sm text-sm font-bold  py-1 hover:bg-white/30 border border-white/30"
             // style={{ boxShadow: "1px 1px 10px rgba(220, 222, 224, .8)" }}
@@ -141,6 +131,20 @@ export default function ProjectContainer({
               GitHub Repo
             </button>
           </a>
+        </div>
+        {/* ----------------------- tech stack ---------------------------------------------------- */}
+
+        {/* <td className="text-left w-1/3 pt-2">Stack:</td> */}
+        <div className="text-left text-slate-200 text-sm py-4">
+          <div className="tech-icons flex flex-wrap gap-4">
+            {techStack.map((stack, index) => (
+              <div key={index} className="flex items-center gap-x-2">
+                <Tooltip content={stack.name}>
+                  <Image src={stack.icon} alt={`${title} tech-icon`} width="30" height="30" />
+                </Tooltip>
+              </div>
+            ))}
+          </div>
         </div>
       </article>
       {/* Under maintenance overlay */}

@@ -5,18 +5,39 @@ import ProjectContainer from "./containers/ProjectContainer";
 // import PostgresIcon from "../../public/postgre.png";
 
 // Sample tech icons for Orderly
-const orderlyTechIcons = [
-  "https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg",
-  "https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg",
-  "/nodejs.png", // Assuming nodejs.png is in public/img/
-  "/postgre.png",
+const orderlyTechStack = [
+  {
+    name: "ReactJS - It's Awesome",
+    icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg",
+  },
+  {
+    name: "TailwindCSS - Styling made Easy",
+    icon: "/tailwind.png",
+  },
+  {
+    name: "NodeJS - Saved the world from Java",
+    icon: "/nodejs.png",
+  },
+  {
+    name: "PostgreSQL - The Elephant Never Forgets",
+    icon: "/postgre.png",
+  },
 ];
 
 // Sample tech icons for Background Pixels
-const bgPixelsTechIcons = [
-  "https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg",
-  "https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg",
-  "https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg",
+const bgPixelsTechStack = [
+  {
+    name: "HTML - Building Blocks of the Web",
+    icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg",
+  },
+  {
+    name: "CSS",
+    icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg",
+  },
+  {
+    name: "JavaScript - The Internet Runs on JS",
+    icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg",
+  },
 ];
 
 export default function Home() {
@@ -42,7 +63,7 @@ export default function Home() {
             liveSiteHref="https://orderlyapp.netlify.app/"
             githubRepoHref="https://github.com/DallasSoftwareDevelopersTeamC/orderly"
             screenshot={"/projects/orderly.png"}
-            techIcons={orderlyTechIcons}
+            techStack={orderlyTechStack}
             completionDate="04-03-2023"
             timeSpan="2 months"
             features={[]}
@@ -56,7 +77,7 @@ export default function Home() {
             liveSiteHref="https://background-pixels.netlify.app/"
             githubRepoHref="https://github.com/Brela/background-pixels"
             screenshot={"/projects/background-pixels.png"}
-            techIcons={bgPixelsTechIcons}
+            techStack={bgPixelsTechStack}
             completionDate="12-20-2022"
             timeSpan="10 days"
             features={["Making a fitting mobile friendly layout."]}
