@@ -12,4 +12,4 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 ## Highlights
 Learned NextJS best practices 
-- e.g. abstracting code that needs to use hooks (useState, useEffects etc.) into sub-components that use 'use-client' in order to keep as many server component files as possible (makes app faster)
+- e.g. abstracting code that needs to use hooks (useState, useEffects etc.) into sub-components that use 'use client' in order to keep as many server component files as possible (makes app faster)

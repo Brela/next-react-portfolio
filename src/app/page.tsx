@@ -1,6 +1,7 @@
 import React from "react";
 import ProjectContainer from "./components/ProjectContainer";
 import SectionHeading from "./components/SectionHeading";
+import AudioPlayer from "./components/AudioPlayer";
 // import OrderlyScreenshot from "../../public/projectOrderly.png";
 // import NodeIcon from "../../public/nodejs.png";
 // import PostgresIcon from "../../public/postgre.png";
@@ -92,6 +93,13 @@ export default function Home() {
       </section>
       <section className="w-full mt-16">
         <SectionHeading title="Beats:" />
+        <div className="grid grid-cols-2 lg:grid-cols-4">
+          <AudioPlayer
+            name="One Productive Badger"
+            mp3Url="/sounds/one/coolHoneyBadger.mp3"
+            imageUrl="/sounds/one/cover.jpg"
+          />
+        </div>
       </section>
     </main>
   );
