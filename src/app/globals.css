@@ -3,10 +3,17 @@
 @tailwind utilities;
 
 html {
-    font-size: 18px;
+    font-size: 19px;
   }
 
   body {
     text-align: center;
   }
   
+
+  .custom-underline {
+    text-decoration: underline;
+    text-underline-offset: 0.2em; /* Adjust the distance */
+    text-underline-position: under; /* For better cross-browser compatibility */
+    text-decoration-thickness: 1px;
+  }
