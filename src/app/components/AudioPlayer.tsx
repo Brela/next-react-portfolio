@@ -33,7 +33,7 @@ const AudioPlayer: FC<AudioPlayerProps> = ({ name, mp3Url, imageUrl }) => {
       <div className="font-bold">{name}</div>
       <div>
         {hasWindow && (
-          <ReactPlayer url={mp3Url} width="100%" height="50px" controls />
+          <ReactPlayer url={mp3Url} width="100%" height="50px" controls loop />
         )}
       </div>
     </div>

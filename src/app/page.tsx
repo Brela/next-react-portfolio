@@ -129,7 +129,7 @@ export default function Home() {
         </div>
       </section>
       <section className="w-full mt-16">
-        <SectionHeading title="Music:" />
+        <SectionHeading title="Breland Music Samples:" />
         <div className="w-full flex justify-center">
           <AudioPlayer
             name="One Productive Badger"
