@@ -1,3 +1,5 @@
+// this is the PROJECTS page
+
 import React from "react";
 import ProjectContainer from "./components/ProjectContainer";
 import SectionHeading from "./components/SectionHeading";
@@ -44,23 +46,12 @@ const bgPixelsTechStack = [
   },
 ];
 
-export default function Home() {
+export default function Projects() {
   return (
-    <main className="pt-4 pb-10 px-5 flex flex-col items-center w-full">
-      <div className=" w-full mb-10 lg:mb-2">
-        <h1 style={{ fontFamily: "Roboto Mono" }} className="text-4xl mb-1">
-          Clayton Breland
-        </h1>
-        <h2
-          style={{ fontFamily: "Roboto Mono" }}
-          className="text-slate-200 text-lg "
-        >
-          Full Stack Software Engineer
-        </h2>
-      </div>
+    <main className="pt-4 pb-10 px-2 lg:px-5 flex flex-col items-center w-full gap-10 lg:gap-16">
       <section className="w-full">
-        <SectionHeading title=" Recent Projects:" />
-        <div className="flex flex-col items-center mx-auto gap-16 w-full">
+        {/* <SectionHeading title=" Recent:" /> */}
+        <div className="flex flex-col items-center mx-auto gap-10 lg:gap-16 w-full">
           <ProjectContainer
             title="Orderly"
             subTitle="Inventory Tracking & Automation"
@@ -94,9 +85,9 @@ export default function Home() {
           />
         </div>
       </section>
-      <section className="w-full mt-16">
-        <SectionHeading title="Other Projects:" />
-        <div className=" max-w-[1200px] grid grid-cols-1  md:grid-cols-2 gap-7 mx-auto">
+      <section className="w-full">
+        {/* <SectionHeading title="Other:" /> */}
+        <div className=" max-w-[1200px] grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-7 mx-auto">
           <SecondaryProjectContainer
             className="col-span-1"
             title="Soccer Stars"
@@ -128,8 +119,8 @@ export default function Home() {
           />
         </div>
       </section>
-      <section className="w-full mt-16">
-        <SectionHeading title="Breland Music Samples:" />
+      <section className="w-full">
+        {/* <SectionHeading title="Breland Music Samples:" /> */}
         <div className="w-full flex justify-center">
           <AudioPlayer
             name="One Productive Badger"

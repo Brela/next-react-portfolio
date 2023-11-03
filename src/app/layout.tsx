@@ -1,7 +1,8 @@
 import './globals.css'
 import type { Metadata } from 'next'
 import { Inconsolata } from "next/font/google";
-import Footer from "./components/Footer";
+import Footer from "./Footer/Footer";
+import Navigation from "./Header";
 
 const mainFont = Inconsolata({ subsets: ["latin"] });
 
@@ -16,15 +17,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="relative">
+    <html lang="en" style={{ overflowX: "hidden", overflowY: "scroll" }}>
+      {/* Make sure the body is flex and takes up at least the full height of the viewport */}
       <body
-        // className={`${mainFont.className}   bg-background-1 text-slate-50  items-center p-4`}
-        className={`${mainFont.className} tracking-widest bg-zinc-900 text-slate-50  items-center p-4`}
+        className={`${mainFont.className} tracking-widest bg-zinc-900 text-slate-50 min-h-screen flex flex-col justify-between`}
       >
-        {children}
-        <div className=" w-full">
-          <Footer />
-        </div>
+        <Navigation />
+        <main className="flex-grow p-4">{children}</main>
+        {/* Ensure footer is not wrapped in a div with w-full unless it's needed for other styling purposes */}
+        <Footer />
       </body>
     </html>
   );

@@ -40,7 +40,7 @@ export default function SecondaryProjectContainer({
   return (
     <section className={twMerge("relative", className)}>
       <article
-        className="rounded-md gap-3 items-center py-5 pb-7 lg:px-12 bg-cyan-800/10 h-full flex flex-col "
+        className="rounded-md gap-3 items-center py-5 pb-7 lg:px-12 bg-cyan-600/10 h-full flex flex-col "
         style={{ boxShadow: "0px 0px 4px white" }}
       >
         {/* ----------------------- stats ---------------------------------------------------- */}
