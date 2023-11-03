@@ -22,10 +22,10 @@ export default function RootLayout({
         className={`${mainFont.className} tracking-widest bg-zinc-900 text-slate-50  items-center p-4`}
       >
         {children}
+        <div className=" w-full">
+          <Footer />
+        </div>
       </body>
-      <div className=" w-full">
-        <Footer />
-      </div>
     </html>
   );
 }
