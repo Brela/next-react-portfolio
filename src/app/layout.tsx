@@ -23,7 +23,7 @@ export default function RootLayout({
         className={`${mainFont.className} tracking-widest bg-zinc-900 text-slate-50 min-h-screen flex flex-col justify-between`}
       >
         <Navigation />
-        <main className="flex-grow p-4">{children}</main>
+        <main className="">{children}</main>
         {/* Ensure footer is not wrapped in a div with w-full unless it's needed for other styling purposes */}
         <Footer />
       </body>
