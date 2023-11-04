@@ -2,7 +2,7 @@ import './globals.css'
 import type { Metadata } from 'next'
 import { Inconsolata } from "next/font/google";
 import Footer from "./Footer/Footer";
-import Navigation from "./Header";
+import Header from "./Header";
 
 const mainFont = Inconsolata({ subsets: ["latin"] });
 
@@ -22,8 +22,10 @@ export default function RootLayout({
       <body
         className={`${mainFont.className} tracking-widest bg-zinc-900 text-slate-50 min-h-screen flex flex-col justify-between`}
       >
-        <Navigation />
-        <main className="">{children}</main>
+        <div>
+          <Header />
+          <main className="">{children}</main>
+        </div>
         {/* Ensure footer is not wrapped in a div with w-full unless it's needed for other styling purposes */}
         <Footer />
       </body>

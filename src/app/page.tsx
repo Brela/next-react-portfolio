@@ -119,16 +119,6 @@ export default function Projects() {
           />
         </div>
       </section>
-      <section className="w-full">
-        {/* <SectionHeading title="Breland Music Samples:" /> */}
-        <div className="w-full flex justify-center">
-          <AudioPlayer
-            name="One Productive Badger"
-            mp3Url="/sounds/one/coolHoneyBadger.mp3"
-            imageUrl="/sounds/one/cover.jpg"
-          />
-        </div>
-      </section>
     </main>
   );
 }

@@ -29,7 +29,7 @@ const Navigation = () => {
 
   const links = [
     { slug: "/", title: "Projects" },
-    { slug: "/resources", title: "Resources" },
+    // { slug: "/resources", title: "Resources" },
     { slug: "/about-me", title: "About Me" },
   ];
 
