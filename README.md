@@ -7,4 +7,4 @@ Learned NextJS best practices
  - abstract code that needs to use hooks (useState, useEffects etc.) into sub-components that use 'use client' in order to keep as many server component files as possible (makes app faster)
  - use built in Next features like the Image element
 
-Mode very simple and modern looking UI
+Made very simple and modern looking UI
