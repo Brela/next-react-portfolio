@@ -94,9 +94,9 @@ export default function SecondaryProjectContainer({
         </div>
 
         {/* ----------------------- links ---------------------------------------------------- */}
-        <div className="flex gap-6 w-full justify-center px-4 pt-2 rounded-sm">
+        <div className="flex gap-8 justify-center px-4 lg:px-12 pt-4 pb-3 rounded-sm">
           <a
-            className="underline basis-1/2 xl:basis-1/3 rounded-sm text-sm font-medium py-1 hover:text-cyan-200  hover:border-accent-green"
+            className="underline whitespace-nowrap xl:basis-1/3 rounded-sm text-sm font-medium py-1  hover:text-cyan-200 hover:border-accent-green"
             // style={{ boxShadow: "1px 1px 10px rgba(220, 222, 224, .8)" }}
             href={liveSiteHref}
             target="_blank"
@@ -104,14 +104,14 @@ export default function SecondaryProjectContainer({
           >
             <button
               disabled={underMaintenance}
-              className="tracking-widest min-w-[180px] custom-underline"
+              className="tracking-wide custom-underline"
             >
               Live Site
             </button>
           </a>
           {/* <span>|</span> */}
           <a
-            className="underline basis-1/2 lg:basis-1/3 rounded-sm text-sm font-medium  py-1  hover:text-cyan-200 hover:border-accent-green"
+            className="underline whitespace-nowrap lg:basis-1/3 rounded-sm text-sm font-medium  py-1  hover:text-cyan-200 hover:border-accent-green"
             // style={{ boxShadow: "1px 1px 10px rgba(220, 222, 224, .8)" }}
             href={githubRepoHref}
             target="_blank"
@@ -119,7 +119,7 @@ export default function SecondaryProjectContainer({
           >
             <button
               disabled={underMaintenance}
-              className="tracking-widest min-w-[180px] custom-underline"
+              className="tracking-wide custom-underline"
             >
               GitHub Repo
             </button>

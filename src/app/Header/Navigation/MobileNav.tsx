@@ -18,7 +18,7 @@ const MobileNav: React.FC<Props> = ({ links, isActive }) => {
     setIsOpen(!isOpen);
   };
   return (
-    <section className="absolute top-7 left-5" ref={menuRef}>
+    <section className="absolute top-7 left-5 z-30" ref={menuRef}>
       <div className="flex items-center justify-between">
         <button onClick={toggleMenu} className="flex flex-col space-y-1.5">
           <span className="block w-7 h-[3px] bg-gray-200"></span>

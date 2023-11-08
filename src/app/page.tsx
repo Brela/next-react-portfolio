@@ -106,7 +106,7 @@ export default function Projects() {
           />
           <SecondaryProjectContainer
             className="col-span-1"
-            title="Soccer Stars"
+            title="Soccer Worldwide"
             subTitle="Player Stats for Top 3 Teams"
             // description="View the real-time top scorers in soccer ( AKA football ) from the 3 most popular leagues in the world. Sometimes the simplest sites are the best ones."
             liveSiteHref="https://soccer-worldwide.netlify.app/"
