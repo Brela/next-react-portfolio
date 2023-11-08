@@ -48,9 +48,9 @@ const bgPixelsTechStack = [
 
 export default function Projects() {
   return (
-    <main className="pt-4 pb-10 px-2 lg:px-5 flex flex-col items-center w-full gap-10 lg:gap-16">
+    <main className="pt-4 px-2 lg:px-5 flex flex-col items-center w-full gap-10 lg:gap-16">
       <section className="w-full">
-        {/* <SectionHeading title=" Recent:" /> */}
+        <SectionHeading title=" Recent Projects:" />
         <div className="flex flex-col items-center mx-auto gap-10 lg:gap-16 w-full">
           <ProjectContainer
             title="Orderly"
@@ -71,12 +71,12 @@ export default function Projects() {
             // underMaintenance={true}
           />
           <ProjectContainer
-            title="Background Pixels"
-            subTitle="Generate a Pixelated Background"
-            description="Add any colors you like to the Color Array and create an intriguing piece of art with the click of a button; powered by vanilla JavaScript. Planning on implementing a feature to download as png."
-            liveSiteHref="https://background-pixels.netlify.app/"
-            githubRepoHref="https://github.com/Brela/background-pixels"
-            screenshot={"/projects/background-pixels.png"}
+            title="Mission Study Cards"
+            subTitle="Flashcards with ChatGPT Assistant"
+            description="Create decks & add study cards to decks. Send your ChatGPT prompt to the front of the flashcard and its response to the back. Work in progress - you might notice some bugs."
+            liveSiteHref="https://missiongpt.netlify.app/"
+            githubRepoHref="https://github.com/Brela/mission-cards"
+            screenshot={"/projects/mission-cards.png"}
             techStack={bgPixelsTechStack}
             completionDate="12-20-2022"
             timeSpan="10 days"
@@ -86,8 +86,22 @@ export default function Projects() {
         </div>
       </section>
       <section className="w-full">
-        {/* <SectionHeading title="Other:" /> */}
+        <SectionHeading title="Other Projects:" className="" />
         <div className=" max-w-[1200px] grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-7 mx-auto">
+          <SecondaryProjectContainer
+            className="col-span-1"
+            title="Background Pixels"
+            subTitle="Generate a Pixelated Background"
+            // description="Create an intriguing piece of art with the click of a button; powered by vanilla JavaScript."
+            liveSiteHref="https://background-pixels.netlify.app/"
+            githubRepoHref="https://github.com/Brela/background-pixels"
+            screenshot={"/projects/background-pixels.png"}
+            techStack={bgPixelsTechStack}
+            completionDate="12-20-2022"
+            timeSpan="10 days"
+            features={["Making a fitting mobile friendly layout."]}
+            complexity={2}
+          />
           <SecondaryProjectContainer
             className="col-span-1"
             title="Soccer Stars"
@@ -102,20 +116,6 @@ export default function Projects() {
             features={[]}
             complexity={7}
             // underMaintenance={true}
-          />
-          <SecondaryProjectContainer
-            className="col-span-1"
-            title="Background Pixels"
-            subTitle="Generate a Pixelated Background"
-            // description="Create an intriguing piece of art with the click of a button; powered by vanilla JavaScript."
-            liveSiteHref="https://background-pixels.netlify.app/"
-            githubRepoHref="https://github.com/Brela/background-pixels"
-            screenshot={"/projects/background-pixels.png"}
-            techStack={bgPixelsTechStack}
-            completionDate="12-20-2022"
-            timeSpan="10 days"
-            features={["Making a fitting mobile friendly layout."]}
-            complexity={2}
           />
         </div>
       </section>

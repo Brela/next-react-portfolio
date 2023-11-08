@@ -36,7 +36,7 @@ export default function ProjectContainer({
 }: Props) {
  
   return (
-    <section className="p-4 md:w-1/2 max-w-[600px]">
+    <section className="p-4 lg:p-0 md:w-1/2 max-w-[600px]">
       <article
         className=" rounded-md flex flex-col gap-3 items-center py-5 lg:px-12  bg-cyan-600/10"
         style={{ boxShadow: "0px 0px 4px white" }}
