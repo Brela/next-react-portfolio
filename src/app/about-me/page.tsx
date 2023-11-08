@@ -52,7 +52,7 @@ export default function AboutMe() {
             </div>
           </div>
 
-          <p>
+          <p className="text-sm lg:text-base">
             {`Hello! I'm Clayton Breland, a Software Engineer with a passion for
             crafting visually appealing and highly functional web
             applications. I have a strong foundation in semantic HTML, CSS, JavaScript,
@@ -79,10 +79,10 @@ export default function AboutMe() {
             </div>
           </div>
 
-          <p>
-            {`  Coming from a background as an Aircraft Technician in the Air Force,
-            I am well-equipped to excel in fast-paced environments and
-            consistently deliver high-quality work within deadlines.`}
+          <p className="text-sm lg:text-base">
+            {`  With a background as an Aircraft Systems Technician in the Air Force,
+            I thrive in fast-paced environments and enjoy
+            consistently delivering high-quality work within deadlines.`}
           </p>
         </div>
 
@@ -105,11 +105,10 @@ export default function AboutMe() {
             </div>
           </div>
 
-          <p>
+          <p className="text-sm lg:text-base">
             {`  Aside from coding, I enjoy travelling, playing soccer, and making
-            music. My wife and I have perfected the art of travelling with 3
-            kids throughout the states. I've been to a few countries, namely the
-            UAE, Germany, and the Bahamas, as well as`}
+            music. So far,  I've been to
+            UAE, Germany, and `}
             <Tooltip
               content={
                 <div className="relative">
