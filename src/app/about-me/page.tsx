@@ -99,7 +99,7 @@ export default function AboutMe() {
                 style={{ width: getImageWidth() }}
                 className="absolute bottom-0 rounded-b-md text-cyan-200 font-bold text-[15px] text-center bg-gray-700"
               >
-                {`With the Fam`}
+                {`With the Fam at Meteor Crater`}
               </div>
             </div>
           </div>
