@@ -73,7 +73,9 @@ export default function Projects() {
           <ProjectContainer
             title="Mission Study Cards"
             subTitle="Flashcards with ChatGPT Assistant"
-            description="Create decks & add study cards to decks. Send your ChatGPT prompt to the front of the flashcard and its response to the back. Work in progress - you might notice some bugs."
+            description="Create decks & add flashcards to decks. 
+            Send your ChatGPT prompt to the front of the flashcard and its response to the back. 
+            This is a work in progress."
             liveSiteHref="https://missiongpt.netlify.app/"
             githubRepoHref="https://github.com/Brela/mission-cards"
             screenshot={"/projects/mission-cards.png"}
@@ -109,7 +111,7 @@ export default function Projects() {
             // description="View the real-time top scorers in soccer ( AKA football ) from the 3 most popular leagues in the world. Sometimes the simplest sites are the best ones."
             liveSiteHref="https://soccer-worldwide.netlify.app/"
             githubRepoHref="https://github.com/Brela/football-soccer-worldwide"
-            // screenshot={"/projects/orderly.png"}
+            screenshot={"/projects/soccer-worldwide.png"}
             // techStack={orderlyTechStack}
             completionDate="04-03-2023"
             timeSpan="2 months"

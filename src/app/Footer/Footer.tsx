@@ -8,9 +8,9 @@ const Footer = () => {
       //   style={{ boxShadow: "0px 0px 2px white" }}
     >
       <Socials />
-      <div>
+      <div className="text-sm">
         <p>This site was designed and built by me.</p>
-        <p className="text-sm mt-2">NextJS, React, Tailwind</p>
+        <p className=" mt-2">NextJS, React, Tailwind</p>
       </div>
       <p className="text-cyan-100">
         <a href="mailto:Claybreland1@gmail.com">Claybreland1@gmail.com</a>

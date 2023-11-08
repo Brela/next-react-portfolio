@@ -12,7 +12,7 @@ interface Props {
   description?: string;
   liveSiteHref: string;
   githubRepoHref: string;
-  screenshot?: string;
+  screenshot: string;
   className?: string;
   techStack?: { name: string; icon: string | StaticImageData }[];
   underMaintenance?: boolean;
@@ -77,15 +77,15 @@ export default function SecondaryProjectContainer({
 
         <div className="flex gap-4 mb-auto mt-3">
           {/* ----------------------- image ---------------------------------------------------- */}
-          {/*           <figure className="py-2">
+          <figure className="flex justify-center">
             <Image
-            src={screenshot}
-            alt={`${title} Screenshot`}
-            width="200"
-            height="170"
-            className="w-3/4 lg:w-full block mx-auto"
+              src={screenshot}
+              alt={`${title} Screenshot`}
+              width="200"
+              height="170"
+              className="block ml-10 lg:ml-0 mx-auto border border-gray-300"
             />
-        </figure> */}
+          </figure>
 
           {/* ----------------------- description ---------------------------------------------------- */}
           <div className="text-left text-xs lg:text-sm tracking-wide px-5 lg:px-0">
