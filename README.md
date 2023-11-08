@@ -8,3 +8,7 @@ Learned NextJS best practices
  - use built in Next features like the Image element
 
 Made very simple and modern looking UI
+
+
+### Planned Optimizations
+- use placeholder image while images are loading
