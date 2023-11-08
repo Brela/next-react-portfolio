@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 import statesVisited from "../../../public/statesVisited.png";
 import commandCenter from "../../../public/commandCenter.png";
 import meWithJammer from "../../../public/meWithJammer.jpeg";
@@ -13,6 +13,7 @@ import { twMerge } from "tailwind-merge";
 
 export default function AboutMe() {
   const { isMobile, windowSize } = useWindowSize();
+  const [loading, setLoading] = useState(true);
 
   const getImageWidth = () => {
     // Provide a default width if windowSize is undefined or width is not set
