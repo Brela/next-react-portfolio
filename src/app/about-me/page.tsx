@@ -10,6 +10,7 @@ import AudioPlayer from "../components/AudioPlayer";
 import SectionHeading from "../components/SectionHeading";
 import useWindowSize from "@/lib/hooks/use-window-size";
 import { twMerge } from "tailwind-merge";
+import AboutMeImageWrapper from "./ImageWrapper";
 
 export default function AboutMe() {
   const { isMobile, windowSize } = useWindowSize();
@@ -34,26 +35,16 @@ export default function AboutMe() {
     <div className="pt-10 pb-20 px-10">
       <section className="pt-4 md:w-[50vw] xl:w-[45vw] max-w-[700px] text-start flex flex-col gap-20 mx-auto">
         <div className="">
-          <div className="md:float-right">
-            <div className="relative mb-10 md:ml-10">
-              <Image
-                src={commandCenter}
-                alt="my work station"
-                width={getImageWidth()}
-                height={isMobile ? 91 : 180}
-                className="rounded-md"
-              />
-              <div
-                style={{ width: getImageWidth() }}
-                className="absolute bottom-0 rounded-b-md text-cyan-200 font-bold text-[15px] text-center bg-gray-700"
-              >
-                Current Command Center
-              </div>
-            </div>
-          </div>
+          <AboutMeImageWrapper
+            src={commandCenter}
+            alt="my work station"
+            width={getImageWidth()}
+            height={isMobile ? 91 : 150}
+            caption="Current Command Center"
+          />
 
           <p className="text-sm lg:text-base">
-            {`Hello! I'm Clayton Breland, a Software Engineer with a passion for
+            {`     Hello! I'm Clayton Breland, a Software Engineer with a passion for
             crafting visually appealing and highly functional web
             applications. I have a strong foundation in semantic HTML, CSS, JavaScript,
             React, Node.js, working with SQL and NoSQL databases, hosting, and
@@ -63,24 +54,18 @@ export default function AboutMe() {
         <div className="">
           <div className="md:float-right">
             <div className="relative mb-10 md:ml-10 ">
-              <Image
+              <AboutMeImageWrapper
                 src={meWithJammer}
                 alt="Clayton Breland in the Air Force with a bomb forklift called a jammer"
                 width={getImageWidth()}
                 height={isMobile ? 91 : 180}
-                className="rounded-md"
+                caption={`In the USAF - I'm on the right`}
               />
-              <div
-                style={{ width: getImageWidth() }}
-                className="absolute bottom-0 rounded-b-md text-cyan-200 font-bold text-[15px] text-center bg-gray-700"
-              >
-                {` In the USAF - I'm on the right`}
-              </div>
             </div>
           </div>
 
           <p className="text-sm lg:text-base">
-            {`  With a background as an Aircraft Systems Technician in the Air Force,
+            {`     With a background as an Aircraft Systems Technician in the Air Force,
             I thrive in fast-paced environments and enjoy
             consistently delivering high-quality work within deadlines.`}
           </p>
@@ -89,24 +74,18 @@ export default function AboutMe() {
         <div className="">
           <div className="md:float-right">
             <div className="relative mb-10 md:ml-10">
-              <Image
+              <AboutMeImageWrapper
                 src={meteorSite}
                 alt="meteor site"
                 width={getImageWidth()}
                 height={isMobile ? 91 : 180}
-                className="rounded-md"
+                caption={`With the Fam at Meteor Crater`}
               />
-              <div
-                style={{ width: getImageWidth() }}
-                className="absolute bottom-0 rounded-b-md text-cyan-200 font-bold text-[15px] text-center bg-gray-700"
-              >
-                {`With the Fam at Meteor Crater`}
-              </div>
             </div>
           </div>
 
           <p className="text-sm lg:text-base">
-            {`  Aside from coding, I enjoy travelling, playing soccer, and making
+            {`     Aside from coding, I enjoy travelling, playing soccer, and making
             music. So far,  I've been to
             UAE, Germany, and `}
             <Tooltip
