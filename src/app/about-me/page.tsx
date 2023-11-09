@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import statesVisited from "../../../public/statesVisited.png";
 import commandCenter from "../../../public/commandCenter.png";
 import meWithJammer from "../../../public/meWithJammer.jpeg";
+import usafTechSchool from "../../../public/usafTechSchool.png";
 import meteorSite from "../../../public/meteorSite.png";
 import Tooltip from "../shared/Tooltip";
 import AudioPlayer from "../components/AudioPlayer";
@@ -34,15 +35,7 @@ export default function AboutMe() {
   return (
     <div className="pt-10 pb-20 px-10">
       <section className="pt-4 md:w-[50vw] xl:w-[45vw] max-w-[700px] text-start flex flex-col gap-20 mx-auto">
-        <div className="">
-          <AboutMeImageWrapper
-            src={commandCenter}
-            alt="my work station"
-            width={getImageWidth()}
-            height={isMobile ? 91 : 150}
-            caption="Current Command Center"
-          />
-
+        <div className="flex flex-col items-center gap-10">
           <p className="text-sm lg:text-base">
             {`     Hello! I'm Clayton Breland, a Software Engineer with a passion for
             crafting visually appealing and highly functional web
@@ -50,61 +43,68 @@ export default function AboutMe() {
             React, Node.js, working with SQL and NoSQL databases, hosting, and
             web development best practices.`}
           </p>
+          <AboutMeImageWrapper
+            className="w-3/4"
+            priority={true}
+            src={commandCenter}
+            alt="my work station"
+            caption="Current Command Center"
+          />
         </div>
         <div className="">
-          <div className="md:float-right">
-            <div className="relative mb-10 md:ml-10 ">
-              <AboutMeImageWrapper
-                src={meWithJammer}
-                alt="Clayton Breland in the Air Force with a bomb forklift called a jammer"
-                width={getImageWidth()}
-                height={isMobile ? 91 : 180}
-                caption={`In the USAF - I'm on the right`}
-              />
-            </div>
-          </div>
-
-          <p className="text-sm lg:text-base">
-            {`     With a background as an Aircraft Systems Technician in the Air Force,
+          <div className="flex flex-col items-center gap-10">
+            <p className="text-sm lg:text-base">
+              {`     With a background as an Aircraft Systems Technician in the Air Force,
             I thrive in fast-paced environments and enjoy
             consistently delivering high-quality work within deadlines.`}
-          </p>
-        </div>
-
-        <div className="">
-          <div className="md:float-right">
-            <div className="relative mb-10 md:ml-10">
+            </p>
+            <div className="flex items-center gap-10">
               <AboutMeImageWrapper
-                src={meteorSite}
-                alt="meteor site"
-                width={getImageWidth()}
-                height={isMobile ? 91 : 180}
-                caption={`With the Fam at Meteor Crater`}
+                className="w-1/2"
+                src={meWithJammer}
+                alt="Clayton Breland in the Air Force with a bomb forklift called a jammer"
+                caption={`Me in the USAF - on the right`}
+              />
+
+              <AboutMeImageWrapper
+                className="w-1/2"
+                src={usafTechSchool}
+                alt="Clayton Breland in Air Force tech school"
+                caption={`In front of an F-15 - center`}
               />
             </div>
           </div>
+        </div>
 
-          <p className="text-sm lg:text-base">
-            {`     Aside from coding, I enjoy travelling, playing soccer, and making
+        <div className="">
+          <div className="flex flex-col items-center gap-10">
+            <p className="text-sm lg:text-base">
+              {`     Aside from coding, I enjoy travelling, playing soccer, and making
             music. So far,  I've been to
             UAE, Germany, and `}
-            <Tooltip
-              content={
-                <div className="relative">
-                  <Image
-                    src={statesVisited}
-                    alt="states visited"
-                    width={400}
-                    height={300}
-                  />
-                  <span className="absolute bottom-3 left-5">{`States I've been to are green :)`}</span>
-                </div>
-              }
-            >
-              <span className="custom-underline">32 states</span>
-            </Tooltip>
-            .
-          </p>
+              <Tooltip
+                content={
+                  <div className="relative">
+                    <Image
+                      src={statesVisited}
+                      alt="states visited"
+                      width={400}
+                      height={300}
+                    />
+                    <span className="absolute bottom-3 left-5">{`States I've been to are green :)`}</span>
+                  </div>
+                }
+              >
+                <span className="custom-underline">32 states</span>
+              </Tooltip>
+              .
+            </p>
+            <AboutMeImageWrapper
+              src={meteorSite}
+              alt="meteor site"
+              caption={`With the Fam at Meteor Crater`}
+            />
+          </div>
         </div>
       </section>
 
