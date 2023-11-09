@@ -2,6 +2,7 @@
 import React from "react";
 import Image from "next/image";
 import { StaticImageData } from "next/image";
+import placeholder from "../../../public/placeholder.jpg";
 
 interface Props {
   src: StaticImageData;
@@ -22,7 +23,7 @@ const AboutMeImageWrapper = ({ src, width, alt, height, caption }: Props) => {
             width={width}
             height={height}
             className="rounded-md"
-            placeholder="blur"
+            placeholder={`data:image/${placeholder}`}
           />
           <div
             style={{ width: width }}
