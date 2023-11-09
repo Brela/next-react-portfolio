@@ -33,11 +33,11 @@ export default function AboutMe() {
   };
 
   return (
-    <div className="pt-10 pb-20 px-10">
+    <div className="pt-5 px-10">
       <section className="pt-4 md:w-[50vw] xl:w-[45vw] max-w-[700px] text-start flex flex-col gap-20 mx-auto">
         <div className="flex flex-col items-center gap-10">
           <p className="text-sm lg:text-base">
-            {`     Hello! I'm Clayton Breland, a Software Engineer with a passion for
+            {`     Hello, thanks for stopping by. I'm Clayton Breland, and I have a passion for
             crafting visually appealing and highly functional web
             applications. I have a strong foundation in semantic HTML, CSS, JavaScript,
             React, Node.js, working with SQL and NoSQL databases, hosting, and
@@ -54,20 +54,19 @@ export default function AboutMe() {
         <div className="">
           <div className="flex flex-col items-center gap-10">
             <p className="text-sm lg:text-base">
-              {`     With a background as an Aircraft Systems Technician in the Air Force,
-            I thrive in fast-paced environments and enjoy
+              {`     I served in the Air Force as an Aircraft Systems Technician and learned how to thrive in fast-paced environments and enjoy
             consistently delivering high-quality work within deadlines.`}
             </p>
-            <div className="flex items-center gap-10">
+            <div className="flex flex-col lg:flex-row items-center gap-10">
               <AboutMeImageWrapper
-                className="w-1/2"
+                className="w-full lg:w-1/2"
                 src={meWithJammer}
                 alt="Clayton Breland in the Air Force with a bomb forklift called a jammer"
                 caption={`Me in the USAF - on the right`}
               />
 
               <AboutMeImageWrapper
-                className="w-1/2"
+                className="w-full lg:w-1/2"
                 src={usafTechSchool}
                 alt="Clayton Breland in Air Force tech school"
                 caption={`In front of an F-15 - center`}
@@ -79,8 +78,7 @@ export default function AboutMe() {
         <div className="">
           <div className="flex flex-col items-center gap-10">
             <p className="text-sm lg:text-base">
-              {`     Aside from coding, I enjoy travelling, playing soccer, and making
-            music. So far,  I've been to
+              {`     Aside from coding in my free time, I enjoy going to tech-related meetups and travelling. So far,  I've been to
             UAE, Germany, and `}
               <Tooltip
                 content={
@@ -102,7 +100,7 @@ export default function AboutMe() {
             <AboutMeImageWrapper
               src={meteorSite}
               alt="meteor site"
-              caption={`With the Fam at Meteor Crater`}
+              caption={`With my family at Meteor Crater`}
             />
           </div>
         </div>

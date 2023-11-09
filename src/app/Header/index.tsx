@@ -13,7 +13,7 @@ const Header = () => {
 
   return (
     <>
-      <div className="w-full pt-5 ml-5 md:ml-0 mb-5 md:mb-0">
+      <div className="w-full pt-5 ml-4 sm:ml-0 mb-5 md:mb-0">
         <h1
           style={{ fontFamily: "Roboto Mono" }}
           className="text-3xl text-gray-300 mb-0"
