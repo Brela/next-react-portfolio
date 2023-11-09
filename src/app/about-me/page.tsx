@@ -44,7 +44,7 @@ export default function AboutMe() {
             web development best practices.`}
           </p>
           <AboutMeImageWrapper
-            className="w-3/4"
+            className="w-[70%]"
             priority={true}
             src={commandCenter}
             alt="my work station"
@@ -98,6 +98,7 @@ export default function AboutMe() {
               .
             </p>
             <AboutMeImageWrapper
+              className="w-[80%]"
               src={meteorSite}
               alt="meteor site"
               caption={`With my family at Meteor Crater`}
