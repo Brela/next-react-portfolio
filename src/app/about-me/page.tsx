@@ -44,7 +44,7 @@ export default function AboutMe() {
             web development best practices.`}
           </p>
           <AboutMeImageWrapper
-            className="w-[70%]"
+            className="w-[70%] lg:w-[50%]"
             priority={true}
             src={commandCenter}
             alt="my work station"
@@ -95,14 +95,15 @@ export default function AboutMe() {
               >
                 <span className="custom-underline">32 states</span>
               </Tooltip>
-              .
             </p>
-            <AboutMeImageWrapper
-              className="w-[80%]"
-              src={meteorSite}
-              alt="meteor site"
-              caption={`With my family at Meteor Crater`}
-            />
+            <div className="w-[70%]">
+              <AboutMeImageWrapper
+                className="w-[70%]"
+                src={meteorSite}
+                alt="meteor site"
+                caption={`With my family at Meteor Crater`}
+              />
+            </div>
           </div>
         </div>
       </section>

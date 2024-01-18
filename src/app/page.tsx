@@ -50,8 +50,22 @@ export default function Projects() {
   return (
     <main className="pt-4 px-2 lg:px-5 flex flex-col items-center w-full gap-10 lg:gap-16">
       <section className="w-full">
-        <SectionHeading title=" Recent Projects:" />
+        <SectionHeading title="Featured:" />
         <div className="flex flex-col items-center mx-auto gap-10 lg:gap-16 w-full">
+          <ProjectContainer
+            title="Dashboard Editor"
+            subTitle="Customize Your App's Dashboard"
+            description="Add widgets, move them around to your liking, then save the dashboard. Also,  check out the seamless guest login - with one click a guest account is created and the user is logged in so they can try out the editor and save dashboards."
+            liveSiteHref="https://dasheditor.netlify.app/"
+            githubRepoHref="https://github.com/Brela/dashboard-editor"
+            screenshot={"/projects/dashboard-editor.png"}
+            className=""
+          />
+        </div>
+      </section>
+      <section className="w-full mx-auto flex flex-col items-center">
+        <SectionHeading title="In Progress:" />
+        <div className=" max-w-[1200px] grid grid-cols-1 md:grid-cols-2 gap-10  lg:gap-[100px] mx-auto">
           <ProjectContainer
             title="Orderly"
             subTitle="Inventory Tracking & Automation"
@@ -63,11 +77,13 @@ export default function Projects() {
             liveSiteHref="https://orderlyapp.netlify.app/"
             githubRepoHref="https://github.com/DallasSoftwareDevelopersTeamC/orderly"
             screenshot={"/projects/orderly.png"}
-            techStack={orderlyTechStack}
+            /*             techStack={orderlyTechStack}
             completionDate="04-03-2023"
             timeSpan="2 months"
             features={[]}
             complexity={7}
+            imageSizeFactor={0.7} */
+            className="max-w-[500px] col-span-1"
             // underMaintenance={true}
           />
           <ProjectContainer
@@ -79,15 +95,17 @@ export default function Projects() {
             liveSiteHref="https://missiongpt.netlify.app/"
             githubRepoHref="https://github.com/Brela/mission-cards"
             screenshot={"/projects/mission-cards.png"}
-            techStack={bgPixelsTechStack}
+            /*            techStack={bgPixelsTechStack}
             completionDate="12-20-2022"
             timeSpan="10 days"
             features={["Making a fitting mobile friendly layout."]}
             complexity={2}
+            imageSizeFactor={0.7} */
+            className="max-w-[500px] col-span-1"
           />
         </div>
       </section>
-      <section className="w-full">
+      <section className="w-full mx-auto">
         <SectionHeading title="Other Projects:" className="" />
         <div className=" max-w-[1200px] grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-7 mx-auto">
           <SecondaryProjectContainer
@@ -98,11 +116,11 @@ export default function Projects() {
             liveSiteHref="https://background-pixels.netlify.app/"
             githubRepoHref="https://github.com/Brela/background-pixels"
             screenshot={"/projects/background-pixels.png"}
-            techStack={bgPixelsTechStack}
+            /*             techStack={bgPixelsTechStack}
             completionDate="12-20-2022"
             timeSpan="10 days"
             features={["Making a fitting mobile friendly layout."]}
-            complexity={2}
+            complexity={2} */
           />
           <SecondaryProjectContainer
             className="col-span-1"
@@ -113,10 +131,10 @@ export default function Projects() {
             githubRepoHref="https://github.com/Brela/football-soccer-worldwide"
             screenshot={"/projects/soccer-worldwide.png"}
             // techStack={orderlyTechStack}
-            completionDate="04-03-2023"
+            /*         completionDate="04-03-2023"
             timeSpan="2 months"
             features={[]}
-            complexity={7}
+            complexity={7} */
             // underMaintenance={true}
           />
         </div>

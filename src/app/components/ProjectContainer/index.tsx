@@ -4,26 +4,30 @@ import type { StaticImageData } from "next/image";
 import Description from "./Description";
 import Tooltip from "@/app/shared/Tooltip";
 import ImageWrapper from "../ImageWrapper";
+import { twMerge } from "tailwind-merge";
 
 interface Props {
   title: string;
   subTitle: string;
   description: string;
+  className?: string;
   liveSiteHref: string;
   githubRepoHref: string;
   screenshot: string;
-  techStack: { name: string; icon: string | StaticImageData }[];
+  techStack?: { name: string; icon: string | StaticImageData }[];
   underMaintenance?: boolean;
-  completionDate: string;
-  timeSpan: string;
+  completionDate?: string;
+  timeSpan?: string;
   features?: string[];
-  complexity: number;
+  complexity?: number;
+  imageSizeFactor?: number;
 }
 
 export default function ProjectContainer({
   title,
   subTitle,
   description,
+  className,
   liveSiteHref,
   githubRepoHref,
   screenshot,
@@ -33,12 +37,17 @@ export default function ProjectContainer({
   timeSpan,
   features,
   complexity,
+  imageSizeFactor,
 }: Props) {
- 
   return (
-    <section className="p-4 lg:p-0 md:w-1/2 max-w-[600px]">
+    <section
+      className={twMerge(
+        "p-4 lg:p-0 max-w-[600px] h-full rounded-md",
+        className,
+      )}
+    >
       <article
-        className=" rounded-md flex flex-col gap-3 items-center py-5 lg:px-12  bg-cyan-600/10"
+        className=" rounded-md flex flex-col h-full gap-3 items-center py-5 lg:px-12  bg-cyan-600/10"
         style={{ boxShadow: "0px 0px 4px white" }}
       >
         {/* ----------------------- title & subtitle ---------------------------------------------------- */}
@@ -48,7 +57,13 @@ export default function ProjectContainer({
         </div>
 
         {/* ----------------------- image ---------------------------------------------------- */}
-        <ImageWrapper screenshot={screenshot} title={title} />
+
+        <ImageWrapper
+          screenshot={screenshot}
+          title={title}
+          sizeFactor={imageSizeFactor}
+        />
+
         {/* ----------------------- description ---------------------------------------------------- */}
         <div className="text-left text-xs lg:text-sm tracking-wide px-5 lg:px-0">
           <Description description={description} />
