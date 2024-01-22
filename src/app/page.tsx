@@ -67,16 +67,15 @@ export default function Projects() {
         <SectionHeading title="In Progress:" />
         <div className=" max-w-[1200px] grid grid-cols-1 md:grid-cols-2 gap-10  lg:gap-[100px] mx-auto">
           <ProjectContainer
-            title="Orderly"
+            title="Inventory Copilot"
             subTitle="Inventory Tracking & Automation"
-            description="Orderly automates inventory management by triggering orders when stock levels reach user-defined reorder points,
-             factoring in additional triggers at percentages of the reorder points for delivery times. To demonstrate its capabilities,
-              the app includes a simulation feature that artificially depletes stock to mimic real-world usage.
+            description="This app automates inventory management by triggering orders when stock levels reach user-defined reorder points. To demonstrate its capabilities,
+              the app includes a feature that depletes stock to mimic real-world usage.
             Orders can be automatically 'delivered' or manually checked off which replenishes stock levels.
 "
-            liveSiteHref="https://orderlyapp.netlify.app/"
-            githubRepoHref="https://github.com/DallasSoftwareDevelopersTeamC/orderly"
-            screenshot={"/projects/orderly.png"}
+            liveSiteHref="https://inv-copilot.netlify.app/"
+            githubRepoHref="https://github.com/Brela/inventory-copilot?tab=readme-ov-file"
+            screenshot={"/projects/inv-copilot.png"}
             /*             techStack={orderlyTechStack}
             completionDate="04-03-2023"
             timeSpan="2 months"
