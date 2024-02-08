@@ -59,7 +59,11 @@ export default function ProjectContainer({
           />
           {/* Under maintenance overlay */}
           {(currentlyDown || inProgress) && (
-            <div className="absolute inset-0 flex items-center justify-center bg-gray-900 rounded-sm bg-opacity-30 z-10">
+            <div
+              className={twMerge(
+                "absolute inset-0 flex items-center justify-center rounded-sm bg-gray-900 bg-opacity-50 z-10",
+              )}
+            >
               <p
                 className={twMerge(
                   "text-white font-semibold w-full",
