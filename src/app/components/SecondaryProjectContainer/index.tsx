@@ -75,7 +75,7 @@ export default function SecondaryProjectContainer({
           </h4>
         </div>
 
-        <div className="flex gap-4 mb-auto mt-3">
+        <div className="flex flex-col items-center gap-4 mb-auto mt-3">
           {/* ----------------------- image ---------------------------------------------------- */}
           <figure className="flex justify-center">
             <Image
@@ -83,12 +83,12 @@ export default function SecondaryProjectContainer({
               alt={`${title} Screenshot`}
               width="200"
               height="170"
-              className="block ml-10 lg:ml-0 mx-auto border border-gray-300"
+              className="block lg:ml-0 mx-auto border border-gray-300"
             />
           </figure>
 
           {/* ----------------------- description ---------------------------------------------------- */}
-          <div className="text-left text-xs lg:text-sm tracking-wide px-5 lg:px-0">
+          <div className="text-left text-sm lg:text-md  tracking-wide px-5 lg:px-0">
             {description && <Description description={description} />}
           </div>
         </div>

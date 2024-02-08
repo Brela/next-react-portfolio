@@ -11,15 +11,12 @@ interface Props {
   subTitle: string;
   description: string;
   className?: string;
-  liveSiteHref: string;
-  githubRepoHref: string;
+  liveSiteHref?: string;
+  githubRepoHref?: string;
   screenshot: string;
   techStack?: { name: string; icon: string | StaticImageData }[];
-  underMaintenance?: boolean;
-  completionDate?: string;
-  timeSpan?: string;
-  features?: string[];
-  complexity?: number;
+  currentlyDown?: boolean;
+  inProgress?: boolean;
   imageSizeFactor?: number;
 }
 
@@ -31,18 +28,15 @@ export default function ProjectContainer({
   liveSiteHref,
   githubRepoHref,
   screenshot,
-  techStack,
-  underMaintenance,
-  completionDate,
-  timeSpan,
-  features,
-  complexity,
+  currentlyDown,
+  inProgress,
+
   imageSizeFactor,
 }: Props) {
   return (
     <section
       className={twMerge(
-        "p-4 lg:p-0 max-w-[600px] h-full rounded-md",
+        "p-4 lg:p-0 max-w-[600px] h-full rounded-md relative",
         className,
       )}
     >
@@ -57,57 +51,68 @@ export default function ProjectContainer({
         </div>
 
         {/* ----------------------- image ---------------------------------------------------- */}
-
-        <ImageWrapper
-          screenshot={screenshot}
-          title={title}
-          sizeFactor={imageSizeFactor}
-        />
+        <section className="relative">
+          <ImageWrapper
+            screenshot={screenshot}
+            title={title}
+            sizeFactor={imageSizeFactor}
+          />
+          {/* Under maintenance overlay */}
+          {(currentlyDown || inProgress) && (
+            <div className="absolute inset-0 flex items-center justify-center bg-gray-900 rounded-sm bg-opacity-30 z-10">
+              <p
+                className={twMerge(
+                  "text-white font-semibold rounded-md w-full",
+                  inProgress ? " hazard-background" : "",
+                )}
+              >
+                {currentlyDown ? "Currently Down" : "In Progress"}
+              </p>
+            </div>
+          )}
+        </section>
 
         {/* ----------------------- description ---------------------------------------------------- */}
-        <div className="text-left text-xs lg:text-sm tracking-wide px-5 lg:px-0">
+        <div className="text-left text-sm lg:text-md tracking-wide px-5 lg:px-0">
           <Description description={description} />
         </div>
 
         {/* ----------------------- links ---------------------------------------------------- */}
         <div className="flex gap-8 justify-center px-4 lg:px-12 pt-4 pb-3 rounded-sm">
-          <a
-            className="underline whitespace-nowrap xl:basis-1/3 rounded-sm text-sm font-medium py-1  hover:text-cyan-200 hover:border-accent-green"
-            // style={{ boxShadow: "1px 1px 10px rgba(220, 222, 224, .8)" }}
-            href={liveSiteHref}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <button
-              disabled={underMaintenance}
-              className="tracking-wide custom-underline"
+          {!currentlyDown && liveSiteHref && (
+            <a
+              className="underline whitespace-nowrap xl:basis-1/3 rounded-sm text-sm font-medium py-1  hover:text-cyan-200 hover:border-accent-green"
+              // style={{ boxShadow: "1px 1px 10px rgba(220, 222, 224, .8)" }}
+              href={liveSiteHref}
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              Live Site
-            </button>
-          </a>
-          {/* <span>|</span> */}
-          <a
-            className="underline whitespace-nowrap lg:basis-1/3 rounded-sm text-sm font-medium  py-1  hover:text-cyan-200 hover:border-accent-green"
-            // style={{ boxShadow: "1px 1px 10px rgba(220, 222, 224, .8)" }}
-            href={githubRepoHref}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <button
-              disabled={underMaintenance}
-              className="tracking-wide custom-underline"
+              <button
+                disabled={currentlyDown}
+                className="tracking-wide custom-underline"
+              >
+                Live Site
+              </button>
+            </a>
+          )}
+          {githubRepoHref && (
+            <a
+              className="underline whitespace-nowrap lg:basis-1/3 rounded-sm text-sm font-medium  py-1  hover:text-cyan-200 hover:border-accent-green"
+              // style={{ boxShadow: "1px 1px 10px rgba(220, 222, 224, .8)" }}
+              href={githubRepoHref}
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              GitHub Repo
-            </button>
-          </a>
+              <button
+                // disabled={currentlyDown}
+                className="tracking-wide custom-underline"
+              >
+                GitHub Repo
+              </button>
+            </a>
+          )}
         </div>
       </article>
-      {/* Under maintenance overlay */}
-      {underMaintenance && (
-        <div className="absolute inset-0 flex items-center justify-center bg-gray-700 bg-opacity-50 z-10">
-          <p className="text-white">Currently down for maintenance</p>
-        </div>
-      )}
     </section>
   );
 }

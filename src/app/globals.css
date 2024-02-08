@@ -3,27 +3,37 @@
 @tailwind utilities;
 
 html {
-    font-size: 19px;
-  }
+  font-size: 19px;
+}
 
-  body {
-    text-align: center;
-  }
-  
+body {
+  text-align: center;
+}
 
-  .custom-underline {
-    text-decoration: underline;
-    text-underline-offset: 0.2em; /* Adjust the distance */
-    text-underline-position: under; /* For better cross-browser compatibility */
-    text-decoration-thickness: 1px;
-  }
+.custom-underline {
+  text-decoration: underline;
+  text-underline-offset: 0.2em; /* Adjust the distance */
+  text-underline-position: under; /* For better cross-browser compatibility */
+  text-decoration-thickness: 1px;
+}
 
-  .clear-right {
-    clear: right;
-  }
-  
-  .clear-left {
-    clear: left;
-  }
-  
+.clear-right {
+  clear: right;
+}
 
+.clear-left {
+  clear: left;
+}
+
+.hazard-background {
+  height: 35px;
+  color: rgb(250, 252, 120);
+  padding: 5px;
+  background-image: repeating-linear-gradient(
+    -55deg,
+    #0000007d,
+    #0000007d 20px,
+    #90914c7d 20px,
+    #adaf1c7d 40px
+  );
+}

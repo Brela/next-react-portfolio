@@ -2,7 +2,8 @@
 import Image from "next/image";
 import React, { useState } from "react";
 import statesVisited from "../../../public/statesVisited.png";
-import commandCenter from "../../../public/commandCenter.png";
+import workStation1 from "../../../public/workStation1.png";
+import workStation2 from "../../../public/workStation2.jpg";
 import meWithJammer from "../../../public/meWithJammer.jpeg";
 import usafTechSchool from "../../../public/usafTechSchool.png";
 import meteorSite from "../../../public/meteorSite.png";
@@ -34,22 +35,31 @@ export default function AboutMe() {
 
   return (
     <div className="pt-5 px-10">
-      <section className="pt-4 md:w-[50vw] xl:w-[45vw] max-w-[700px] text-start flex flex-col gap-20 mx-auto">
-        <div className="flex flex-col items-center gap-10">
+      <section className="pt-4 md:w-[50vw] xl:w-[45vw] max-w-[700px] text-start flex flex-col gap-16 mx-auto">
+        <div className="flex flex-col gap-7 items-center">
           <p className="text-sm lg:text-base">
-            {`     Hello, thanks for stopping by. I'm Clayton Breland, and I have a passion for
+            {`     Hello, thanks for stopping by! I'm Clayton Breland, a developer with a passion for
             crafting visually appealing and highly functional web
             applications. I have a strong foundation in semantic HTML, CSS, JavaScript,
             React, Node.js, working with SQL and NoSQL databases, hosting, and
             web development best practices.`}
           </p>
-          <AboutMeImageWrapper
-            className="w-[70%] lg:w-[50%]"
-            priority={true}
-            src={commandCenter}
-            alt="my work station"
-            caption="Current Command Center"
-          />
+          <section className="w-full flex gap-10">
+            <AboutMeImageWrapper
+              className="w-full lg:w-1/2"
+              priority={true}
+              src={workStation1}
+              alt="my work station"
+              caption="Work Station 1"
+            />
+            <AboutMeImageWrapper
+              className="w-full lg:w-1/2"
+              priority={true}
+              src={workStation2}
+              alt="my work station"
+              caption="Work Station 2"
+            />
+          </section>
         </div>
         <div className="">
           <div className="flex flex-col items-center gap-10">
@@ -78,9 +88,9 @@ export default function AboutMe() {
         <div className="">
           <div className="flex flex-col items-center gap-10">
             <p className="text-sm lg:text-base">
-              {`     Aside from coding in my free time, I enjoy going to tech-related meetups and travelling. So far,  I've been to
-            UAE, Germany, and `}
-              <Tooltip
+              {`     Aside from coding, in my free time I enjoy going to tech-related meetups and travelling. So far,  I've been to
+            UAE, Germany, and 32 states.`}
+              {/*  <Tooltip
                 content={
                   <div className="relative">
                     <Image
@@ -94,14 +104,24 @@ export default function AboutMe() {
                 }
               >
                 <span className="custom-underline">32 states</span>
-              </Tooltip>
+              </Tooltip>{" "}
+              <span>{`< Hover Me`}</span> */}
             </p>
+            <div className="relative">
+              <Image
+                src={statesVisited}
+                alt="states visited"
+                width={400}
+                height={300}
+              />
+              <span className="absolute bottom-3 left-5">{`States I've been to are green :)`}</span>
+            </div>
             <div className="w-[70%]">
               <AboutMeImageWrapper
                 className="w-[70%]"
                 src={meteorSite}
                 alt="meteor site"
-                caption={`With my family at Meteor Crater`}
+                caption={`With the fam at Meteor Crater, NM`}
               />
             </div>
           </div>

@@ -63,8 +63,57 @@ export default function Projects() {
           />
         </div>
       </section>
-      <section className="w-full mx-auto flex flex-col items-center">
+
+      <section className="w-full">
         <SectionHeading title="In Progress:" />
+        <div className="flex flex-col items-center mx-auto gap-10 lg:gap-16 w-full">
+          <ProjectContainer
+            title="Limitless Developers Dallas"
+            subTitle="A Hub for Local Meetups"
+            description="This website will list all of the tech meetups in the local Dallas area. The problem I've had with Meetup.com is that many meetups are hard to find unless you search for specific keywords like AWS, Docker, UX Design, etc. Utilizing the meetup.com API, this searches for events with the most common tech keywords to get all of these meetups in one place and will list things like the date, the amount of people going, and a link to the event on Meetup.com. "
+            // liveSiteHref="https://inv-copilot.netlify.app/"
+            // githubRepoHref="https://github.com/Brela/inventory-copilot?tab=readme-ov-file"
+            screenshot={"/projects/lddallas.png"}
+            className=""
+            inProgress={true}
+          />
+        </div>
+      </section>
+
+      <section className="w-full mx-auto">
+        <SectionHeading title="Other Projects:" className="" />
+        <div className=" max-w-[1200px] grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-7 mx-auto">
+          <SecondaryProjectContainer
+            className="col-span-1"
+            title="Background Pixels"
+            subTitle="Generate a Pixelated Background"
+            liveSiteHref="https://background-pixels.netlify.app/"
+            githubRepoHref="https://github.com/Brela/background-pixels"
+            screenshot={"/projects/background-pixels.png"}
+          />
+          <SecondaryProjectContainer
+            className="col-span-1"
+            title="Soccer Worldwide"
+            subTitle="Player Stats for Top 3 Leagues"
+            liveSiteHref="https://soccer-worldwide.netlify.app/"
+            githubRepoHref="https://github.com/Brela/football-soccer-worldwide"
+            screenshot={"/projects/soccer-worldwide.png"}
+          />
+        </div>
+        <div className=" max-w-[600px] mt-12 grid grid-cols-1 gap-10 lg:gap-7 mx-auto">
+          <SecondaryProjectContainer
+            className=""
+            title="Coding Challenges"
+            subTitle="Tracking My Progress"
+            liveSiteHref="https://brela-codewars.netlify.app/"
+            githubRepoHref="https://github.com/Brela/codewars-showcase"
+            screenshot={"/projects/javascript-portfolio.png"}
+            description="This site was made with plain JS, CSS, HTML during my first year of coding. The HTML file is embarrisingly large, but the UI has potential. So, I might convert this to React and use it as the foundation of a blog page on a site that I am building currently"
+          />
+        </div>
+      </section>
+      <section className="w-full mx-auto flex flex-col items-center">
+        <SectionHeading title="Past Projects:" />
         <div className=" max-w-[1200px] grid grid-cols-1 md:grid-cols-2 gap-10  lg:gap-[100px] mx-auto">
           <ProjectContainer
             title="Inventory Copilot"
@@ -76,14 +125,8 @@ export default function Projects() {
             liveSiteHref="https://inv-copilot.netlify.app/"
             githubRepoHref="https://github.com/Brela/inventory-copilot?tab=readme-ov-file"
             screenshot={"/projects/inv-copilot.png"}
-            /*             techStack={orderlyTechStack}
-            completionDate="04-03-2023"
-            timeSpan="2 months"
-            features={[]}
-            complexity={7}
-            imageSizeFactor={0.7} */
             className="max-w-[500px] col-span-1"
-            // underMaintenance={true}
+            currentlyDown={true}
           />
           <ProjectContainer
             title="Mission Study Cards"
@@ -94,47 +137,8 @@ export default function Projects() {
             liveSiteHref="https://missiongpt.netlify.app/"
             githubRepoHref="https://github.com/Brela/mission-cards"
             screenshot={"/projects/mission-cards.png"}
-            /*            techStack={bgPixelsTechStack}
-            completionDate="12-20-2022"
-            timeSpan="10 days"
-            features={["Making a fitting mobile friendly layout."]}
-            complexity={2}
-            imageSizeFactor={0.7} */
             className="max-w-[500px] col-span-1"
-          />
-        </div>
-      </section>
-      <section className="w-full mx-auto">
-        <SectionHeading title="Other Projects:" className="" />
-        <div className=" max-w-[1200px] grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-7 mx-auto">
-          <SecondaryProjectContainer
-            className="col-span-1"
-            title="Background Pixels"
-            subTitle="Generate a Pixelated Background"
-            // description="Create an intriguing piece of art with the click of a button; powered by vanilla JavaScript."
-            liveSiteHref="https://background-pixels.netlify.app/"
-            githubRepoHref="https://github.com/Brela/background-pixels"
-            screenshot={"/projects/background-pixels.png"}
-            /*             techStack={bgPixelsTechStack}
-            completionDate="12-20-2022"
-            timeSpan="10 days"
-            features={["Making a fitting mobile friendly layout."]}
-            complexity={2} */
-          />
-          <SecondaryProjectContainer
-            className="col-span-1"
-            title="Soccer Worldwide"
-            subTitle="Player Stats for Top 3 Leagues"
-            // description="View the real-time top scorers in soccer ( AKA football ) from the 3 most popular leagues in the world. Sometimes the simplest sites are the best ones."
-            liveSiteHref="https://soccer-worldwide.netlify.app/"
-            githubRepoHref="https://github.com/Brela/football-soccer-worldwide"
-            screenshot={"/projects/soccer-worldwide.png"}
-            // techStack={orderlyTechStack}
-            /*         completionDate="04-03-2023"
-            timeSpan="2 months"
-            features={[]}
-            complexity={7} */
-            // underMaintenance={true}
+            currentlyDown={true}
           />
         </div>
       </section>
