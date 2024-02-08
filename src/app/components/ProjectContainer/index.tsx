@@ -62,11 +62,11 @@ export default function ProjectContainer({
             <div className="absolute inset-0 flex items-center justify-center bg-gray-900 rounded-sm bg-opacity-30 z-10">
               <p
                 className={twMerge(
-                  "text-white font-semibold rounded-md w-full",
+                  "text-white font-semibold w-full",
                   inProgress ? " hazard-background" : "",
                 )}
               >
-                {currentlyDown ? "Currently Down" : "In Progress"}
+                {currentlyDown ? "Currently Down" : "Coming Soon"}
               </p>
             </div>
           )}

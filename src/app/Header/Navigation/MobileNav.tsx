@@ -29,7 +29,7 @@ const MobileNav: React.FC<Props> = ({ links, isActive }) => {
 
       <div
         style={{ maxHeight: isOpen ? "33vh" : "0" }}
-        className="overflow-hidden transition-max-height duration-700 ease-in-out bg-slate-600   mt-4  rounded-md"
+        className="overflow-hidden transition-max-height duration-700 ease-in-out bg-zinc-700   mt-4  rounded-md"
       >
         <nav className="flex flex-col gap-4 py-5 px-8">
           {links.map((link) => (
@@ -39,8 +39,8 @@ const MobileNav: React.FC<Props> = ({ links, isActive }) => {
               onClick={() => setIsOpen(false)}
               className={`hover:text-white transition-colors duration-300 ${
                 isActive(link.slug)
-                  ? "custom-underline text-white"
-                  : "text-gray-400"
+                  ? "custom-underline text-white font-bold"
+                  : "text-gray-300"
               }`}
             >
               {link.title}

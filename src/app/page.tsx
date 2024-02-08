@@ -55,7 +55,7 @@ export default function Projects() {
           <ProjectContainer
             title="Dashboard Editor"
             subTitle="Customize Your App's Dashboard"
-            description="Add widgets, move them around to your liking, then save the dashboard. Also,  check out the seamless guest login - with one click a guest account is created and the user is logged in so they can try out the editor and save dashboards."
+            description="Add widgets, move them around to your liking, then save the dashboard. Check out the seamless guest login - with one click a guest account is created and the user is logged in so they can try out the editor and save dashboards."
             liveSiteHref="https://dasheditor.netlify.app/"
             githubRepoHref="https://github.com/Brela/dashboard-editor"
             screenshot={"/projects/dashboard-editor.png"}
@@ -122,11 +122,11 @@ export default function Projects() {
               the app includes a feature that depletes stock to mimic real-world usage.
             Orders can be automatically 'delivered' or manually checked off which replenishes stock levels.
 "
-            liveSiteHref="https://inv-copilot.netlify.app/"
+            // liveSiteHref="https://inv-copilot.netlify.app/"
             githubRepoHref="https://github.com/Brela/inventory-copilot?tab=readme-ov-file"
             screenshot={"/projects/inv-copilot.png"}
             className="max-w-[500px] col-span-1"
-            currentlyDown={true}
+            // currentlyDown={true}
           />
           <ProjectContainer
             title="Mission Study Cards"
@@ -134,11 +134,11 @@ export default function Projects() {
             description="Create decks & add flashcards to decks. 
             Send your ChatGPT prompt to the front of the flashcard and its response to the back. 
             This is a work in progress."
-            liveSiteHref="https://missiongpt.netlify.app/"
+            // liveSiteHref="https://missiongpt.netlify.app/"
             githubRepoHref="https://github.com/Brela/mission-cards"
             screenshot={"/projects/mission-cards.png"}
             className="max-w-[500px] col-span-1"
-            currentlyDown={true}
+            // currentlyDown={true}
           />
         </div>
       </section>

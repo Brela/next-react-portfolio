@@ -40,9 +40,9 @@ export default function AboutMe() {
           <p className="text-sm lg:text-base">
             {`     Hello, thanks for stopping by! I'm Clayton Breland, a developer with a passion for
             crafting visually appealing and highly functional web
-            applications. I have a strong foundation in semantic HTML, CSS, JavaScript,
-            React, Node.js, working with SQL and NoSQL databases, hosting, and
-            web development best practices.`}
+            applications. My specialty is in JavaScript,
+            React, Next.js, Node.js, MongoDB, PostgreS, hosting, and
+            web development best practices. Recently, I've been excited about exploring new concepts like system design and AWS services.`}
           </p>
           <section className="w-full flex gap-10">
             <AboutMeImageWrapper
