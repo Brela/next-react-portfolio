@@ -8,10 +8,10 @@ import HorizontalDivider from "./HorizontalDivider";
 const Footer = () => {
   return (
     <section
-      className=" mt-[200px] pb-16 lg:pb-10 py-7  flex flex-col gap-5 text-sm items-center border-t border-gray-600 text-white lg:px-12 bg-zinc-800"
+      className=" mt-[200px] pb-16 lg:pb-10 py-7  flex flex-col gap-5 text-sm items-center border-t border-gray-600 text-white px-6 lg:px-12 bg-zinc-800"
       //   style={{ boxShadow: "0px 0px 2px white" }}
     >
-      <div className="-sm">
+      <div className="leading-loose">
         <p>This site was built from scratch using</p>
         <p className="text-md">
           NEXT.js <Divider /> ReactJS <Divider /> Tailwind
