@@ -2,6 +2,8 @@
 import React, { useState, useRef } from "react";
 import Link from "next/link";
 import useClickOutside from "@/lib/hooks/use-click-outside"; // Update the path as necessary
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
 
 interface Props {
   links: { slug: string; title: string }[];
@@ -19,13 +21,13 @@ const MobileNav: React.FC<Props> = ({ links, isActive }) => {
   };
   return (
     <section className="absolute top-7 left-5 z-30" ref={menuRef}>
-      <div className="flex items-center justify-between">
-        <button onClick={toggleMenu} className="flex flex-col space-y-1.5">
-          <span className="block w-7 h-[3px] bg-gray-200"></span>
-          <span className="block w-7 h-[3px] bg-gray-200"></span>
-          <span className="block w-7 h-[3px] bg-gray-200"></span>
-        </button>
-      </div>
+      <button>
+        <FontAwesomeIcon
+          icon={faBars}
+          className="text-gray-300 w-7 h-7 absolute left-2 top-1"
+          onClick={toggleMenu}
+        />
+      </button>
 
       <div
         style={{ maxHeight: isOpen ? "33vh" : "0" }}

@@ -1,5 +1,5 @@
-import './globals.css'
-import type { Metadata } from 'next'
+import "./globals.css";
+import type { Metadata } from "next";
 import { Inconsolata } from "next/font/google";
 import Footer from "./Footer/Footer";
 import Header from "./Header";
@@ -8,7 +8,8 @@ const mainFont = Inconsolata({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Clayton Breland's Portfolio",
-  description: "Software Engineer",
+  description:
+    "Software Engineer / Web Developer in Dallas with some awesome custom built projects.",
 };
 
 export default function RootLayout({
