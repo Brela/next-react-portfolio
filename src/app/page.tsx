@@ -48,7 +48,7 @@ const bgPixelsTechStack = [
 
 export default function Projects() {
   return (
-    <main className="pt-4 px-2 lg:px-5 flex flex-col items-center w-full gap-10 lg:gap-16">
+    <main className="pt-6 px-2 lg:px-5 flex flex-col items-center w-full gap-10 lg:gap-16">
       <section className="w-full">
         <SectionHeading title="Featured:" />
         <div className="flex flex-col items-center mx-auto gap-10 lg:gap-16 w-full">

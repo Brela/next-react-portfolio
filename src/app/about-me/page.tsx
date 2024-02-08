@@ -34,7 +34,7 @@ export default function AboutMe() {
   };
 
   return (
-    <div className="pt-5 px-10">
+    <div className="pt-10 px-10">
       <section className="pt-4 md:w-[50vw] xl:w-[45vw] max-w-[700px] text-start flex flex-col gap-16 mx-auto">
         <div className="flex flex-col gap-7 items-center">
           <p className="text-sm lg:text-base">
