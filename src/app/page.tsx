@@ -71,7 +71,8 @@ export default function Projects() {
             title="Limitless Developers Dallas"
             subTitle="A Hub for Local Meetups"
             description="This website will list all of the tech meetups in the local Dallas area. The problem I've had with Meetup.com is that many meetups are hard to find unless you search for specific keywords like AWS, Docker, UX Design, etc. Utilizing the meetup.com API, this searches for events with the most common tech keywords to get all of these meetups in one place and will list things like the date, the amount of people going, and a link to the event on Meetup.com. "
-            // liveSiteHref="https://inv-copilot.netlify.app/"
+            liveSiteHref="https://lddallas.vercel.app/"
+            altLiveSiteText="Site - Under Construction"
             // githubRepoHref="https://github.com/Brela/inventory-copilot?tab=readme-ov-file"
             screenshot={"/projects/lddallas.png"}
             className=""

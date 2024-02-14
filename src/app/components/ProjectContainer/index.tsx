@@ -12,6 +12,7 @@ interface Props {
   description: string;
   className?: string;
   liveSiteHref?: string;
+  altLiveSiteText?: string;
   githubRepoHref?: string;
   screenshot: string;
   techStack?: { name: string; icon: string | StaticImageData }[];
@@ -26,6 +27,7 @@ export default function ProjectContainer({
   description,
   className,
   liveSiteHref,
+  altLiveSiteText,
   githubRepoHref,
   screenshot,
   currentlyDown,
@@ -95,7 +97,7 @@ export default function ProjectContainer({
                 disabled={currentlyDown}
                 className="tracking-wide custom-underline"
               >
-                Live Site
+                {altLiveSiteText || "Live Site"}
               </button>
             </a>
           )}
