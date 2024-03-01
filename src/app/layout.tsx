@@ -9,7 +9,7 @@ const mainFont = Inconsolata({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Clayton Breland's Portfolio",
   description:
-    "Software Engineer / Web Developer in Dallas with some awesome custom built projects.",
+    "Web Developer in Dallas with some awesome custom built projects.",
 };
 
 export default function RootLayout({

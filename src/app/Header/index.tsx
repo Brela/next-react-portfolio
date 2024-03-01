@@ -24,7 +24,7 @@ const Header = () => {
           style={{ fontFamily: "Roboto Mono" }}
           className="text-gray-400 text-sm "
         >
-          Software Engineer
+          Web Developer & IT Support Tech
         </h2>
       </div>
 
