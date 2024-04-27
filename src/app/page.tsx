@@ -98,7 +98,7 @@ export default function Projects() {
             liveSiteHref="https://background-pixels.netlify.app/"
             githubRepoHref="https://github.com/Brela/background-pixels"
             screenshot={"/projects/background-pixels.png"}
-            description="Generate a pixelated background image with colors of your choosing"
+            description="Generate a pixelated background image with colors of your choosing."
           />
           {/*  <ProjectContainer
             title="Mission Study Cards"
