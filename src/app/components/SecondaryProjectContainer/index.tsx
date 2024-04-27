@@ -10,16 +10,11 @@ interface Props {
   title: string;
   subTitle: string;
   description?: string;
-  liveSiteHref: string;
+  liveSiteHref?: string;
   githubRepoHref: string;
   screenshot: string;
   className?: string;
-  techStack?: { name: string; icon: string | StaticImageData }[];
   underMaintenance?: boolean;
-  completionDate?: string;
-  timeSpan?: string;
-  features?: string[];
-  complexity?: number;
 }
 
 export default function SecondaryProjectContainer({
@@ -30,12 +25,8 @@ export default function SecondaryProjectContainer({
   githubRepoHref,
   screenshot,
   className,
-  techStack,
+
   underMaintenance,
-  completionDate,
-  timeSpan,
-  features,
-  complexity,
 }: Props) {
   return (
     <section className={twMerge("relative", className)}>
@@ -81,7 +72,7 @@ export default function SecondaryProjectContainer({
             <Image
               src={screenshot}
               alt={`${title} Screenshot`}
-              width="200"
+              width="300"
               height="170"
               className="block lg:ml-0 mx-auto border border-gray-300"
             />
@@ -95,20 +86,22 @@ export default function SecondaryProjectContainer({
 
         {/* ----------------------- links ---------------------------------------------------- */}
         <div className="flex gap-8 justify-center px-4 lg:px-12 pt-4 pb-3 rounded-sm">
-          <a
-            className="underline whitespace-nowrap xl:basis-1/3 rounded-sm text-sm font-medium py-1  hover:text-cyan-200 hover:border-accent-green"
-            // style={{ boxShadow: "1px 1px 10px rgba(220, 222, 224, .8)" }}
-            href={liveSiteHref}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <button
-              disabled={underMaintenance}
-              className="tracking-wide custom-underline"
+          {liveSiteHref && (
+            <a
+              className="underline whitespace-nowrap xl:basis-1/3 rounded-sm text-sm font-medium py-1  hover:text-cyan-200 hover:border-accent-green"
+              // style={{ boxShadow: "1px 1px 10px rgba(220, 222, 224, .8)" }}
+              href={liveSiteHref}
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              Live Site
-            </button>
-          </a>
+              <button
+                disabled={underMaintenance}
+                className="tracking-wide custom-underline"
+              >
+                Live Site
+              </button>
+            </a>
+          )}
           {/* <span>|</span> */}
           <a
             className="underline whitespace-nowrap lg:basis-1/3 rounded-sm text-sm font-medium  py-1  hover:text-cyan-200 hover:border-accent-green"

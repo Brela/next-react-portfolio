@@ -20,7 +20,7 @@ const Footer = () => {
       <HorizontalDivider />
       <section className="flex flex-col lg:flex-row gap-5 items-center">
         <p className="w-full lg:w-auto">Contact Me:</p>
-        <div className="">
+        <div className="min-h-[50px]">
           <a
             href="https://www.linkedin.com/in/clayton-breland"
             target="_blank"
