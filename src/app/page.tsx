@@ -12,6 +12,16 @@ export default function Projects() {
         <SectionHeading title="Featured:" />
         <div className="flex flex-col items-center mx-auto gap-10 lg:gap-16 w-full">
           <ProjectContainer
+            title="Brela Exams"
+            subTitle="Create Exams With Single Prompt"
+            description="Enter a prompt for the exam you want - it can be anything! Your prompt hits the OpenAI API and returns the exam."
+            liveSiteHref="https://brela-exams.vercel.app/"
+            githubRepoHref="https://github.com/Brela/brela-exams-front"
+            screenshot={"/projects/brela-exams.png"}
+            className=""
+          />
+
+          <ProjectContainer
             title="Dashboard Editor"
             subTitle="Customize Your App's Dashboard"
             description="Add widgets, move them around to your liking, then save the dashboard. Check out the seamless guest login - with one click a guest account is created and the user is logged in so they can try out the editor and save dashboards."
@@ -75,7 +85,7 @@ export default function Projects() {
         </div>
        
       </section> */}
-      <section className="w-full mx-auto flex flex-col items-center">
+      <section className="w-full mx-auto flex flex-col items-center mt-20">
         <SectionHeading title="Past Projects:" />
         <div className=" max-w-[1200px] grid grid-cols-1 md:grid-cols-2 gap-10  lg:gap-[10px] mx-auto">
           <SecondaryProjectContainer
